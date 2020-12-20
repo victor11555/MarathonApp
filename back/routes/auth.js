@@ -14,10 +14,10 @@ router.post('/login', async (req, res, next) => {
   } = req.body;
   let user;
   if(role === 'company') {
-    user = await Company.findOne({email});
+    user = await Company.findOne({email}).populate('marathons');
   } else {
     console.log('here')
-    user = await Student.findOne({email});
+    user = await Student.findOne({email}).populate('marathons');
   }
   if (user && (await bcrypt.compare(password, user.password))) {
     // create session
@@ -50,7 +50,7 @@ router.post('/signup', async (req, res, next) => {
       company,
       // role,
       marathons: [],
-    });
+    }).populate('marathons');
   } else {
     if (await Student.findOne({ username }) && await Student.findOne({ email })) {
       /// already have such user
@@ -63,7 +63,7 @@ router.post('/signup', async (req, res, next) => {
       tlg,
       // role,
       marathons: [],
-    });
+    }).populate('marathons');
   }
 
   await user.save();

@@ -18,9 +18,15 @@ export default function StudentDashboard() {
         </ListGroup.Item>
 
         <ListGroup.Item>
-            <p>hjghjghjhg</p>
+            <button onClick={(e) => {
+                e.preventDefault();
+                // window.location.href='https://t.me/elbrus_marathon';
+                window.open('https://t.me/elbrus_marathon', '_blank');
+            }
+            }>To Telegram</button>
           {/*Orders: {user && user.orders.map(el => <Order id={el} />)}*/}
         </ListGroup.Item>
+
 
       </ListGroup>
     )

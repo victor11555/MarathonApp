@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import MarathonForm from './MarathonForm/MarathonForm';
+import Marathon from "../../Marathon/Marathon";
 
 export default function CompanyDashboard() {
 
@@ -34,13 +35,11 @@ export default function CompanyDashboard() {
         </ListGroup.Item>
 
         <ListGroup.Item>
-          {/*  {user.offers.map(el=> (*/}
-          {/*  <>*/}
-          {/*    <button onClick={() => setStateOrder(!stateOrder)}>Add Task</button>*/}
-          {/*    /!*{stateOrder ? <OrderForm key={el} offerId={el}/> : null}*!/*/}
-          {/*    /!*<Offer id={el}/>*!/*/}
-          {/*  </>*/}
-          {/*)) }*/}
+            {user.marathons.map(el=> (
+            <>
+              <Marathon marathon={el}/>
+            </>
+          )) }
         </ListGroup.Item>
 
 
