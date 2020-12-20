@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap';
-import { marathonURL } from '../../../utils/urls';
+import { marathonURL } from '../../utils/urls';
 import { useHistory } from 'react-router-dom';
 
 export default function MarathonForm() {
