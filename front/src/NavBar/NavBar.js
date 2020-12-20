@@ -1,18 +1,48 @@
-import {Navbar, Nav} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { useState } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
 
 function NavBar() {
+  const ourStyle = { color: "white", padding: "5px" };
+  const myStyle = { color: "black", padding: "5px" };
+  let logged = true;
+  const user = JSON.parse(localStorage.getItem("user"));
 
-  const ourStyle ={color: 'white'}
+  if (!user) {
+    logged = !logged;
+  }
+
   return (
-  <Navbar bg="primary" variant="dark">
-    <Nav className="mr-auto">
-      <Link style={ourStyle} to="/main">MARATHON APP</Link>
-      <Link style={ourStyle} to="/login">Log In</Link>
-      <Link style={ourStyle} to="/signup">Sign Up</Link>
-      <Link style={ourStyle} to="/dashboard">Dashboard</Link>
-    </Nav>
-  </Navbar>
+    <>
+      {logged ? (
+        <Navbar bg="primary" variant="dark">
+          <Nav className="mr-auto">
+            <p style={myStyle}>Hello, {user.username}</p>
+            <Link style={ourStyle} to="/main">
+              MARATHON APP
+            </Link>
+            <Link style={ourStyle} to="/dashboard">
+              Dashboard
+            </Link>
+          </Nav>
+        </Navbar>
+      ) : (
+        <Navbar bg="primary" variant="dark">
+          <Nav className="mr-auto">
+            <p style={myStyle}>Hello, guest! You should signup or login</p>
+
+            <Link style={ourStyle} to="/login">
+              Log In
+            </Link>
+            <Link style={ourStyle} to="/signup">
+              Sign Up
+            </Link>
+          </Nav>
+        </Navbar>
+      )}
+    </>
+
+  
   );
 }
 
