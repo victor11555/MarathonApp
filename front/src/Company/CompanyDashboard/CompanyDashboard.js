@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { useHistory, Link } from 'react-router-dom';
 import MarathonForm from '../MarathonForm/MarathonForm';
-import Marathon from "../../Marathon/Marathon";
 
 export default function CompanyDashboard() {
 
@@ -37,8 +36,7 @@ export default function CompanyDashboard() {
         <ListGroup.Item>
           {user.marathons.map(el => (
             <>
-              {/* <Marathon key={Math.random()} marathon={el}/> */}
-              <Link to={`/dashboard/${el._id}`}> <div>Marathon: {el.title}</div></Link>
+              <Link to={`/dashboard/addTask/${el._id}`}> <div>Marathon: {el.title}</div></Link>
             </>
           ))}
         </ListGroup.Item>

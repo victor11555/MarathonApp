@@ -13,4 +13,4 @@ const marathonSchema = new mongoose.Schema({
   channelName: String,
 });
 
-module.exports = mongoose.model('Marathon', marathonSchema);
+module.exports = mongoose.model('MarathonAddTask', marathonSchema);

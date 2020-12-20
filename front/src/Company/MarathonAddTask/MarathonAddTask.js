@@ -2,7 +2,7 @@ import React from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
-export default function Marathon({ }) {
+export default function MarathonAddTask({ }) {
     const { id } = useParams();
     const { marathons } = JSON.parse(localStorage.getItem('user'));
     console.log( marathons);

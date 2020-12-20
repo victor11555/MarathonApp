@@ -29,7 +29,7 @@ export default function MarathonForm() {
           const { user } = response;
           localStorage.setItem('user', JSON.stringify(user));
           const id = user.marathons[user.marathons.length-1]._id
-          history.push(`/dashboard/${id}`)
+          history.push(`/dashboard/addTask/${id}`)
         }
       });
   }

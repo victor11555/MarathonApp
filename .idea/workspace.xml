@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/README.old.md" beforeDir="false" afterPath="$PROJECT_DIR$/front/README.old.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Marathon/Marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -41,6 +48,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front/src/Company" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,6 +63,8 @@
       <updated>1608295063466</updated>
       <workItem from="1608295065697" duration="3571000" />
       <workItem from="1608462435517" duration="171000" />
+      <workItem from="1608464199211" duration="954000" />
+      <workItem from="1608465182329" duration="381000" />
     </task>
     <servers />
   </component>

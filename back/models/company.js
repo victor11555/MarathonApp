@@ -6,7 +6,7 @@ const companySchema = new mongoose.Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   tlg: String,
-  marathons:[{type: mongoose.Schema.Types.ObjectId, ref:'Marathon'}],
+  marathons:[{type: mongoose.Schema.Types.ObjectId, ref:'MarathonAddTask'}],
   role: {type: String, required: true, default: 'company'},
 });
 
