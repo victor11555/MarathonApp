@@ -12,7 +12,7 @@ router
       title, start, duration, description, timeResponse, deadline, timeVideo, channelName
     })
     await marathon.save();
-    console.log(marathon);
+    // console.log(marathon);
     await user.marathons.push(marathon);
     await user.save();
     res.json({ success: true, user }).status(200);

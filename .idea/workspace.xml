@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/models/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/company.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/models/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/marathon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/README.old.md" beforeDir="false" afterPath="$PROJECT_DIR$/front/README.old.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Marathon/Marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +59,8 @@
       <workItem from="1608295065697" duration="3571000" />
       <workItem from="1608462435517" duration="171000" />
       <workItem from="1608464199211" duration="954000" />
-      <workItem from="1608465182329" duration="381000" />
+      <workItem from="1608465182329" duration="460000" />
+      <workItem from="1608465699251" duration="762000" />
     </task>
     <servers />
   </component>
