@@ -13,7 +13,7 @@ export default function CompanyDashboard() {
 
   const onClickHandler = () => {
     localStorage.removeItem('user');
-    history.push('/')
+    window.location = 'http://localhost:3000/main'
   }
 
   return (

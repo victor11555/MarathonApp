@@ -8,7 +8,7 @@ export default function StudentDashboard() {
 
     const onClickHandler = () => {
          localStorage.removeItem('user');
-       window.location = 'http://localhost:3000/'
+        window.location = 'http://localhost:3000/main'
     }
 
     return (

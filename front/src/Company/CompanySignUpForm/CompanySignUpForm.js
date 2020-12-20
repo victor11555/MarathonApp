@@ -24,7 +24,7 @@ export default function CompanySignUpForm() {
         else {
           const { user } = response;
           localStorage.setItem('user', JSON.stringify(user));
-          history.push('/')
+            window.location = 'http://localhost:3000/main'
         }
       });
   }

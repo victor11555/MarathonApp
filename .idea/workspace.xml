@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/Marathon/Marathon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608295063466</updated>
       <workItem from="1608295065697" duration="3571000" />
+      <workItem from="1608462435517" duration="171000" />
     </task>
     <servers />
   </component>
@@ -66,5 +67,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
