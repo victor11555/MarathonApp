@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { useHistory, Link } from 'react-router-dom';
 import MarathonForm from '../MarathonForm/MarathonForm';
+import { Modal, Button } from 'react-bootstrap';
 
 export default function CompanyDashboard() {
 
   const [stateMarathon, setSetMarathon] = useState();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const user = JSON.parse(localStorage.getItem('user'));
   const history = useHistory();
@@ -36,7 +40,26 @@ export default function CompanyDashboard() {
         <ListGroup.Item>
           {user.marathons.map(el => (
             <>
-              <Link to={`/dashboard/addTask/${el._id}`}> <div>Marathon: {el.title}</div></Link>
+              <Button variant="primary" onClick={handleShow}>
+                Marathon: {el.title}
+              </Button>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Marathon: {el.title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Choose what you want to do with this marathon!</Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                  <Button variant="primary" onClick={()=>history.push(`/dashboard/checkMarathon/${el._id}`)}>
+                    Check Marathon
+                  </Button>
+                  <Button variant="primary" onClick={()=>history.push(`/dashboard/editMarathon/${el._id}`)}>
+                    Edit Marathon
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </>
           ))}
         </ListGroup.Item>
