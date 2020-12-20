@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import {ListGroup} from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import MarathonForm from './MarathonForm/MarathonForm';
 
 export default function CompanyDashboard() {
+
+  const [stateMarathon, setSetMarathon] = useState();
+
   const user = JSON.parse(localStorage.getItem('user'));
   const history = useHistory();
 
@@ -25,23 +29,23 @@ export default function CompanyDashboard() {
         <ListGroup.Item>Email: {user.email}</ListGroup.Item>
 
         <ListGroup.Item>
-          {/*<button onClick={() => setStateOffer(!stateOffer)}>Add Marathon</button>*/}
-          {/*{stateOffer ? <OfferForm/> : null}*/}
+          <button onClick={() => setSetMarathon(!stateMarathon)}>Add Marathon</button>
+          {stateMarathon ? <MarathonForm /> : null}
         </ListGroup.Item>
 
         <ListGroup.Item>
-        {/*  {user.offers.map(el=> (*/}
-        {/*  <>*/}
-        {/*    <button onClick={() => setStateOrder(!stateOrder)}>Add Task</button>*/}
-        {/*    /!*{stateOrder ? <OrderForm key={el} offerId={el}/> : null}*!/*/}
-        {/*    /!*<Offer id={el}/>*!/*/}
-        {/*  </>*/}
-        {/*)) }*/}
+          {/*  {user.offers.map(el=> (*/}
+          {/*  <>*/}
+          {/*    <button onClick={() => setStateOrder(!stateOrder)}>Add Task</button>*/}
+          {/*    /!*{stateOrder ? <OrderForm key={el} offerId={el}/> : null}*!/*/}
+          {/*    /!*<Offer id={el}/>*!/*/}
+          {/*  </>*/}
+          {/*)) }*/}
         </ListGroup.Item>
 
 
 
-        </ListGroup>
+      </ListGroup>
     </div>
   )
 }
