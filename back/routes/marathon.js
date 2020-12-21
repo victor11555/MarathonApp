@@ -3,6 +3,7 @@ const Marathon = require('../models/marathon');
 const Task = require('../models/task');
 const Company = require('../models/company');
 const Student = require('../models/student');
+const Feedback = require('../models/feedback');
 
 router
   .route('/')
@@ -24,7 +25,17 @@ router
   })
 
 router.post('/feedback', async (req, res) => {
-  console.log(req.body)//zaglushka
+    const { points, marathonId, comment, day, task, taskId } = req.body;
+    const feedback = new Feedback({
+        points,
+        marathon: marathonId,
+        task: taskId,
+        taskNumb: task,
+        day,
+        comment,
+    });
+    feedback.save();
+    res.json({success: true})
 })
 
 router.post('/addtask', async (req, res) => {
@@ -40,7 +51,8 @@ router.post('/addtask', async (req, res) => {
     await user.save();
     res.json({success: true, user})
 })
-  router.post('/participate', async (req, res) => {
+
+router.post('/participate', async (req, res) => {
   const { user, id } = req.body;
   const student = await Student.findById(user).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}}});
   const marathon = await Marathon.findById(id).populate({path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}})
@@ -50,11 +62,7 @@ router.post('/addtask', async (req, res) => {
 })
 
 router.post('/answer', async (req, res, next) => {
-    const { answer, marathon, userId, day, task, taskId } = req.body
-    // let curMarathon = await Marathon.findOne({_id: marathon}).populate({path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}});
-    // curMarathon.tasks[day-1].task[task-1].answers.push({student: userId, answer});
-    // console.log(curMarathon.tasks[0].task[0].answers)
-    // await curMarathon.save();
+    const { answer, marathon, userId, day, task, taskId } = req.body;
     let curTask = await Task.findOne({_id: taskId}).populate('answers');
     curTask.answers.push({student: userId, answer})
     await curTask.save();

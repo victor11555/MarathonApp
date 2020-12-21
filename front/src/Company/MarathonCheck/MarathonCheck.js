@@ -13,22 +13,22 @@ export default function MarathonCheck() {
         // взять выбранный оптион
         setPoints(e.target.value)
     }
-    const submitHandler = (e, studentId, day, task) => {
+    const submitHandler = (e, studentId, day, task, taskId) => {
         e.preventDefault();
-        const comment = e.target.children[0].children[1].value;
+        const comment = e.target.children[1].value;
 
         fetch(checkStudentUrl, {
             method: 'POST',
             headers: {
                 'Content-type': 'Application/json',
             },
-            body: JSON.stringify({ studentId, points, comment, marathonId: marathon._id, day, task }),
+            body: JSON.stringify({ studentId, points, comment, marathonId: marathon._id, day, task, taskId }),
         })
             .then(res => res.json())
             .then(response => {
                 if (!response.success) console.log(response.message);
                 else {
-                    console.log(response);//zaglushka
+                    console.log(response);
                 }
             });
     }
@@ -49,9 +49,10 @@ export default function MarathonCheck() {
                                 {task.answers.map((answer) =>
                                     <li>
                                         <div>Answers</div>
+                                        {/*популате студента*/}
                                         Student: {answer.student}
                                         Answer: {answer.answer}
-                                        <form onSubmit={e => submitHandler(e, answer.student._id, index+1, i+1)}>
+                                        <form onSubmit={e => submitHandler(e, answer.student._id, index+1, i+1, task._id)}>
                                             <select onChange={changeHandler}>
                                                 <option>1</option>
                                                 <option>2</option>
