@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import TaskForm from "../TaskForm/TaskForm";
 
 export default function MarathonAddTask({ }) {
     const { id } = useParams();
     const { marathons } = JSON.parse(localStorage.getItem('user'));
-    console.log( marathons);
     const marathon = marathons.filter(el => el._id === id)[0];
-    console.log(marathon);
+    const [state, setState] = useState(null);
+
     const day = (index) => {
         return (
             <Card key={Math.random()}>
@@ -15,7 +16,10 @@ export default function MarathonAddTask({ }) {
                     Day {index + 1}
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey={`${index + 1}`}>
-                    <Card.Body><button onClick={() => console.log()}>Добавить задание</button></Card.Body>
+                    <Card.Body>
+                        <button onClick={() => setState(index)}>Добавить задание</button>
+                        {state === index ? <TaskForm day={index+1} marathon={marathon} /> : null}
+                    </Card.Body>
                 </Accordion.Collapse>
             </Card>
         )
@@ -31,7 +35,6 @@ export default function MarathonAddTask({ }) {
         <>
             <div>Marathon: {marathon.title} </div>
             <Accordion defaultActiveKey="0">
-
                 {arr.map((el, index) =>
                     <>{day(index)}</>
                 )}

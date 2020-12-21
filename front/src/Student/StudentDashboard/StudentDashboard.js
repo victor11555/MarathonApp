@@ -6,16 +6,8 @@ export default function StudentDashboard() {
     const user = JSON.parse(localStorage.getItem('user'));
     const history = useHistory();
 
-    const onClickHandler = () => {
-         localStorage.removeItem('user');
-        window.location = 'http://localhost:3000/main'
-    }
-
     return (
         <ListGroup variant='flush'>
-        <ListGroup.Item>
-          <button onClick={onClickHandler}>Log Out</button>
-        </ListGroup.Item>
 
         <ListGroup.Item>
             <button onClick={(e) => {
