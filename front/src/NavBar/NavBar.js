@@ -12,6 +12,11 @@ function NavBar() {
     logged = !logged;
   }
 
+  const onClickHandler = () => {
+    localStorage.removeItem('user');
+    window.location = 'http://localhost:3000/main'
+  }
+
   return (
     <>
       {logged ? (
@@ -23,6 +28,9 @@ function NavBar() {
             </Link>
             <Link style={ourStyle} to="/dashboard">
               Dashboard
+            </Link>
+            <Link onClick={onClickHandler} style={ourStyle} to="#">
+              LogOut
             </Link>
           </Nav>
         </Navbar>
@@ -42,7 +50,7 @@ function NavBar() {
       )}
     </>
 
-  
+
   );
 }
 
