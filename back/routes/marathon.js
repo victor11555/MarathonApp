@@ -42,7 +42,7 @@ router.post('/addtask', async (req, res) => {
 })
   router.post('/participate', async (req, res) => {
   const { user, id } = req.body;
-  const student = await Student.findById(user);
+  const student = await Student.findById(user).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task'}}});
   const marathon = await Marathon.findById(id);
   student.marathons.push(marathon);
   await student.save();

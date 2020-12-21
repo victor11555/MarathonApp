@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, Form} from "react-bootstrap";
-import {addTaskUrl} from "../../utils/urls";
+import { Button, Form } from "react-bootstrap";
+import { addTaskUrl } from "../../utils/urls";
 
-function TaskForm({ day, marathon, userId}) {
+function TaskForm({ day, marathon, userId }) {
     const submitHandler = (e) => {
         e.preventDefault();
         const description = e.target.children[0].children[1].value;
@@ -20,6 +20,8 @@ function TaskForm({ day, marathon, userId}) {
                 else {
                     const { user } = response;
                     localStorage.setItem('user', JSON.stringify(user));
+                    e.target.children[0].children[1].value = '';
+                    e.target.children[1].children[1].value = '';
                 }
             });
     }
@@ -27,7 +29,7 @@ function TaskForm({ day, marathon, userId}) {
         <Form onSubmit={submitHandler}>
             <Form.Group controlId='formBasicDescription'>
                 <Form.Label>Task</Form.Label>
-                <Form.Control type='text' placeholder='Enter description' required/>
+                <Form.Control type='text' placeholder='Enter description' required />
             </Form.Group>
 
             <Form.Group controlId='formBasicUrl'>
