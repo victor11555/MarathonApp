@@ -4,7 +4,7 @@ import { marathonURL } from '../../utils/urls';
 import { useHistory } from 'react-router-dom';
 
 export default function MarathonForm() {
-  const { _id } = JSON.parse(localStorage.getItem('user'))
+  const { _id, company } = JSON.parse(localStorage.getItem('user'))
   const history = useHistory();
   const submitHandler = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export default function MarathonForm() {
     fetch(marathonURL, {
       method: 'POST',
       headers: { 'Content-type': 'Application/json' },
-      body: JSON.stringify({ title, start, duration, description, timeResponse, deadline, role: 'company', timeVideo, channelName, _id })
+      body: JSON.stringify({company, title, start, duration, description, timeResponse, deadline, role: 'company', timeVideo, channelName, _id })
     })
       .then(res => res.json())
       .then(response => {

@@ -1,19 +1,20 @@
 const router = require('express').Router();
 const Marathon = require('../models/marathon');
-const Task = require('../models/task')
-const Company = require('../models/company')
+const Task = require('../models/task');
+const Company = require('../models/company');
+const Student = require('../models/student');
 
 router
   .route('/')
   .post(async (req, res) => {
-    const { title, start, duration, description, timeResponse, deadline, role, timeVideo, channelName, _id } = req.body;
+    const { company, title, start, duration, description, timeResponse, deadline, role, timeVideo, channelName, _id } = req.body;
     const user = await Company.findById(_id).populate('marathons');
-    const arr =  [];
-    for (let i = 0; i < duration; i+= 1) {
-        arr.push({day: i+1, task: []});
+    const arr = [];
+    for (let i = 0; i < duration; i += 1) {
+      arr.push({ day: i + 1, task: [] });
     }
     const marathon = await new Marathon({
-      title, start, duration, description, timeResponse, deadline, timeVideo, channelName, tasks: arr
+      company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName, tasks: arr
     })
     await marathon.save();
     // console.log(marathon);
@@ -23,7 +24,7 @@ router
   })
 
 router.post('/feedback', async (req, res) => {
-    console.log(req.body)//zaglushka
+  console.log(req.body)//zaglushka
 })
 
 router.post('/addtask', async (req, res) => {
@@ -38,6 +39,14 @@ router.post('/addtask', async (req, res) => {
     const user = await Company.findById(userId).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task'}}});
     await user.save();
     res.json({success: true, user})
+})
+  router.post('/participate', async (req, res) => {
+  const { user, id } = req.body;
+  const student = await Student.findById(user);
+  const marathon = await Marathon.findById(id);
+  student.marathons.push(marathon);
+  await student.save();
+  res.json({ success: true, student }).status(200);
 })
 
 module.exports = router;

@@ -12,6 +12,7 @@ const marathonSchema = new mongoose.Schema({
     day: Number,
     task: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
   }],
+  company: String,
   channelName: String,
 });
 
