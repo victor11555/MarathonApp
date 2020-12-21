@@ -5,10 +5,9 @@ const Marathon = require('../models/marathon')
 
 router.get('/', async (req, res, next) => {
     const marathons = await Marathon.find().sort({ start: 1 }).populate()
-    // const nowDate = new Date();
-    // const nowMarathons = marathons.filter((el) => el.date >= nowDate);
-    // res.json(nowMarathons).status(200);
-    res.json(marathons).status(200);
+    const nowDate = new Date();
+    const nowMarathons = marathons.filter((el) => el.start >= nowDate);
+    res.json({success: true, nowMarathons }).status(200);
 })
 
 module.exports = router;
