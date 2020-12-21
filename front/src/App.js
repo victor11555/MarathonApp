@@ -7,6 +7,7 @@ import MainPage from './pages/MainPage/MainPage';
 import MarathonAddTask from './Company/MarathonAddTask/MarathonAddTask';
 import MarathonEdit from './Company/MarathonEdit/MarathonEdit';
 import MarathonCheck from './Company/MarathonCheck/MarathonCheck';
+import MarathonAnswer from "./Student/MarathonAnswer/MarathonAnswer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/dashboard/editMarathon/:id' component={MarathonEdit} />
         <Route exact path='/dashboard/checkMarathon/:id' component={MarathonCheck} />
         <Route exact path='/dashboard/addTask/:id' component={MarathonAddTask} />
+          <Route exact path='/dashboard/answerMarathon/:id' component={MarathonAnswer} />
       </Switch>
     </>
   );
