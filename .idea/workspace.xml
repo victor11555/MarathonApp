@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/urls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

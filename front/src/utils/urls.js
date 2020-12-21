@@ -7,4 +7,5 @@ export const mainURL = `${URL}/main`;
 export const marathonURL = `${URL}/marathon`;
 export const addTaskUrl = `${URL}/marathon/addtask`;
 export const checkStudentUrl = `${URL}/marathon/feedback`;/////////////////////
-export const participateURL = `${URL}/marathon/participate`
+export const participateURL = `${URL}/marathon/participate`;
+export const answerUrl = `${URL}/marathon/answer`;
