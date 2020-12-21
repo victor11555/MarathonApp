@@ -2,13 +2,14 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { mainURL, participateURL } from '../../utils/urls';
 import { Button, Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 
 export default function StudentMainPage() {
     const user = JSON.parse(localStorage.getItem('user'));
     const { _id } = user;
     const [marathons, setMarathons] = useState([]);
-    const [button, setButton] = useState(true);
+    const history = useHistory();
 
     useEffect(() => {
         fetch(mainURL)
@@ -25,7 +26,6 @@ export default function StudentMainPage() {
 
     const onclickHandler = (e, el) => {
         e.preventDefault();
-        // setButton(!button);
         fetch(participateURL, {
             method: "POST",
             headers: { 'Content-Type': 'Application/json' },
@@ -37,6 +37,7 @@ export default function StudentMainPage() {
                 else {
                     const { student } = response;
                     localStorage.setItem('user', JSON.stringify(student));
+                    history.push('/dashboard')
                 }
             });
     }
@@ -57,7 +58,6 @@ export default function StudentMainPage() {
                             <Card.Text>
                                 {el.description}
                             </Card.Text>
-                            
                             {flag ? <div >You participate</div> : <Button onClick={e => onclickHandler(e, el, date)} variant="primary">Participate</Button>}
                         </Card.Body>
                         <Card.Footer className="text-muted">
