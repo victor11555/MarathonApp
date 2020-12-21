@@ -2,8 +2,7 @@ import React from 'react';
 import {Button, Form} from "react-bootstrap";
 import {addTaskUrl} from "../../utils/urls";
 
-function TaskForm({ day, marathon}) {
-    console.log(day, marathon)
+function TaskForm({ day, marathon, userId}) {
     const submitHandler = (e) => {
         e.preventDefault();
         const description = e.target.children[0].children[1].value;
@@ -13,16 +12,14 @@ function TaskForm({ day, marathon}) {
             headers: {
                 'Content-type': 'Application/json',
             },
-            body: JSON.stringify({ description, solution, day, marathon }),
+            body: JSON.stringify({ description, solution, day, marathon, userId }),
         })
             .then(res => res.json())
             .then(response => {
                 if (!response.success) console.log(response.message);
                 else {
-                    console.log(response)
-                    // const { user } = response;
-                    // localStorage.setItem('user', JSON.stringify(user));
-                    // window.location = 'http://localhost:3000/main'
+                    const { user } = response;
+                    localStorage.setItem('user', JSON.stringify(user));
                 }
             });
     }
