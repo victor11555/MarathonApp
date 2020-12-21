@@ -8,10 +8,9 @@ const marathonSchema = new mongoose.Schema({
   deadline: String,
   timeVideo: String,
   description:{ type: String, unique: true, required: true },
-  // tasks:[{type: mongoose.Schema.Types.Mixed} ],
   tasks: [{
     day: Number,
-    task: [{type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
+    task: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
   }],
   company: String,
   channelName: String,

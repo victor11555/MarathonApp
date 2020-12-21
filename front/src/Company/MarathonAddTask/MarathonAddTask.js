@@ -5,7 +5,8 @@ import TaskForm from "../TaskForm/TaskForm";
 
 export default function MarathonAddTask({ }) {
     const { id } = useParams();
-    const { marathons } = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user'));
+    const { marathons } = user;
     const marathon = marathons.filter(el => el._id === id)[0];
     const [state, setState] = useState(null);
 
@@ -17,8 +18,14 @@ export default function MarathonAddTask({ }) {
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey={`${index + 1}`}>
                     <Card.Body>
-                        <button onClick={() => setState(index)}>Добавить задание</button>
-                        {state === index ? <TaskForm day={index+1} marathon={marathon} /> : null}
+                        <button onClick={() => { state===null ? setState(index) : setState(null)}}>Добавить задание</button>
+                        {state === index ? <TaskForm day={index+1} userId={user._id} marathon={marathon} /> : null}
+                        {marathon.tasks[index].task.map((task, i) =>
+                            <>
+                                <div>Task{i+1}</div>
+                                <div>Description: {task.description}</div>
+                            </>
+                        )}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>

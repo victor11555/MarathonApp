@@ -28,17 +28,19 @@ router.post('/feedback', async (req, res) => {
 })
 
 router.post('/addtask', async (req, res) => {
-  const { description, solution, day, marathon } = req.body;
-  const task = new Task({
-    description, solution, marathon: marathon._id
-  })
-  let curMarathon = await Marathon.findOne({ _id: marathon._id });
-  await task.save();
-  curMarathon.tasks[day - 1].task.push(task.id);
-  await curMarathon.save();
+    const { description, solution, day, marathon, userId} = req.body;
+    const task  = new Task({
+        description, solution, marathon: marathon._id
+    })
+    let curMarathon = await Marathon.findOne({_id: marathon._id}).populate('tasks.task');
+    await task.save();
+    curMarathon.tasks[day-1].task.push(task.id);
+    await curMarathon.save();
+    const user = await Company.findById(userId).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task'}}});
+    await user.save();
+    res.json({success: true, user})
 })
-
-router.post('/participate', async (req, res) => {
+  router.post('/participate', async (req, res) => {
   const { user, id } = req.body;
   const student = await Student.findById(user);
   const marathon = await Marathon.findById(id);

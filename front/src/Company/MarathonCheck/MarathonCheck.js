@@ -32,20 +32,23 @@ export default function MarathonCheck() {
                 }
             });
     }
-
     return (
         <ListGroup variant="flush">
             <ListGroup.Item>Marathon: {marathon.title}</ListGroup.Item>
             <ListGroup.Item>
+                <ul>
                 {marathon.tasks.map((el, index) =>
-                    <>
-                        Day{index + 1}
-                        {el.map((task, i) =>
-                            <>
-                                Task{i+1}
-                                Description: {task.description}
+                    <li>
+                       <div>Day{el.day}</div>
+                        <ul>
+                        {el.task.map((task, i) =>
+                            <li>
+                                <div>Task{i+1}</div>
+                                <div>Description: {task.description}</div>
+                                <ul>
                                 {task.answers.map((answer) =>
-                                    <>
+                                    <li>
+                                        <div>Answers</div>
                                         Student: {answer.student}
                                         Answer: {answer.answer}
                                         <form onSubmit={e => submitHandler(e, answer.student._id, index+1, i+1)}>
@@ -59,11 +62,13 @@ export default function MarathonCheck() {
                                             <input name={'comment'} placeholder={'comment'}/>
                                             <button type='submit'>Checked</button>
                                         </form>
-                                    </>
-                                )}
-                            </>)}
-                    </>
+                                    </li>
+                                )}</ul>
+                            </li>)}
+                        </ul>
+                    </li>
                 )}
+                </ul>
             </ListGroup.Item>
         </ListGroup>
     )

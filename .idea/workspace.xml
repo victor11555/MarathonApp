@@ -4,14 +4,10 @@
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/models/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/marathon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/models/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/utils/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/TaskForm/TaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/TaskForm/TaskForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
