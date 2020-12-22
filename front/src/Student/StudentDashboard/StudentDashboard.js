@@ -8,7 +8,6 @@ export default function StudentDashboard() {
   const history = useHistory();
 
 const onclickHandler = (e, el) => {
-  console.log(el);
   e.preventDefault();
   history.push(`/dashboard/answerMarathon/${el._id}`)
 }
