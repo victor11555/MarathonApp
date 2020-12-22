@@ -11,6 +11,8 @@ export default class Checker {
 
   checkMarathonStarted(marathonId) {// находим марафон и возвращаем тру, если он начался
     const curMarathon = this.user.marathons.filter((marathon) => marathon._id === marathonId);
+    // console.log(curMarathon);
+    if (curMarathon.length === 0) return false
     return (new Date(curMarathon[0].start) < Date.now())// 
   }
 
