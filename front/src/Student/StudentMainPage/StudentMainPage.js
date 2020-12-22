@@ -1,13 +1,13 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import { mainURL, participateURL } from '../../utils/urls';
-import { Button, Card } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import {mainURL, participateURL} from '../../utils/urls';
+import {Button, Card} from 'react-bootstrap';
+import {useHistory} from 'react-router-dom';
 
 
 export default function StudentMainPage() {
     const user = JSON.parse(localStorage.getItem('user'));
-    const { _id } = user;
+    const {_id} = user;
     const [marathons, setMarathons] = useState([]);
     const history = useHistory();
 
@@ -15,12 +15,12 @@ export default function StudentMainPage() {
         fetch(mainURL)
             .then(res => res.json())
             .then(res => {
-                if (!res.success) alert(res.message);
-                else {
-                    const { nowMarathons } = res;
-                    setMarathons(nowMarathons)
+                    if (!res.success) alert(res.message);
+                    else {
+                        const {nowMarathons} = res;
+                        setMarathons(nowMarathons)
+                    }
                 }
-            }
             )
     }, [])
 
@@ -28,14 +28,14 @@ export default function StudentMainPage() {
         e.preventDefault();
         fetch(participateURL, {
             method: "POST",
-            headers: { 'Content-Type': 'Application/json' },
-            body: JSON.stringify({ id: el._id, user: _id })
+            headers: {'Content-Type': 'Application/json'},
+            body: JSON.stringify({id: el._id, user: _id})
         })
             .then(res => res.json())
             .then(response => {
                 if (!response.success) console.log(response.message);
                 else {
-                    const { student } = response;
+                    const {student} = response;
                     localStorage.setItem('user', JSON.stringify(student));
                     history.push('/dashboard')
                 }
@@ -58,7 +58,8 @@ export default function StudentMainPage() {
                             <Card.Text>
                                 {el.description}
                             </Card.Text>
-                            {flag ? <div >You participate</div> : <Button onClick={e => onclickHandler(e, el, date)} variant="primary">Participate</Button>}
+                            {flag ? <div>You participate</div> : <Button onClick={e => onclickHandler(e, el, date)}
+                                                                         variant="primary">Participate</Button>}
                         </Card.Body>
                         <Card.Footer className="text-muted">
                             Start: {`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}
