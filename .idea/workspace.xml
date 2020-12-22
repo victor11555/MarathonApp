@@ -3,9 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middleware/db-connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/middleware/db-connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middleware/error-handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/middleware/error-handlers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middleware/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/middleware/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/company.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/models/feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/feedback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/back/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyLoginForm/CompanyLoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyLoginForm/CompanyLoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanySignUpForm/CompanySignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanySignUpForm/CompanySignUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonAddTask/MarathonAddTask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonEdit/MarathonEdit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonForm/MarathonForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/TaskForm/TaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/TaskForm/TaskForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentLoginForm/StudentLoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentLoginForm/StudentLoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/DashboardPage/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/DashboardPage/DashboardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/LoginPage/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/SignUpPage/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/SignUpPage/SignUpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/reducer/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/reducer/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/reducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/reducer/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/class.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/class.js" afterDir="false" />
+    </list>
+    <list id="a603fad0-d59d-4c93-b658-d8ec27c5dd61" name="Changes by anka" comment="">
+      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/class.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/urls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +69,57 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/front/src/utils/class.js">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
+        <range start1="1" end1="4" start2="3" end2="7" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="5" end1="10" start2="8" end2="13" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="11" end1="16" start2="14" end2="19" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="17" end1="22" start2="20" end2="25" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="23" end1="28" start2="26" end2="31" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="29" end1="31" start2="32" end2="34" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="32" end1="33" start2="35" end2="36" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="34" end1="36" start2="37" end2="39" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="37" end1="40" start2="40" end2="43" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="41" end1="46" start2="44" end2="49" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="47" end1="49" start2="50" end2="52" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="50" end1="51" start2="53" end2="54" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="52" end1="54" start2="55" end2="57" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="55" end1="59" start2="58" end2="62" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="60" end1="64" start2="63" end2="67" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="65" end1="67" start2="68" end2="70" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="68" end1="69" start2="71" end2="72" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="70" end1="72" start2="73" end2="75" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="73" end1="77" start2="76" end2="80" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="78" end1="86" start2="81" end2="89" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="87" end1="88" start2="90" end2="114" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
+        <range start1="89" end1="90" start2="115" end2="115" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="4" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="5" end1="5" start2="5" end2="6" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="8" end1="9" start2="9" end2="10" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="10" end1="11" start2="11" end2="12" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="21" end1="22" start2="22" end2="23" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="27" end1="28" start2="28" end2="29" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="32" end1="32" start2="33" end2="34" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
+        <range start1="36" end1="36" start2="38" end2="46" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="41" end1="42" start2="51" end2="53" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="43" end1="44" start2="54" end2="55" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
+        <range start1="48" end1="57" start2="59" end2="84" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="60" end1="63" start2="87" end2="90" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
+        <range start1="68" end1="70" start2="95" end2="96" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+        <range start1="76" end1="76" start2="102" end2="103" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1lpXZRCkEkKXrMiIPSYM69wzxor" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,6 +138,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -66,6 +159,7 @@
       <workItem from="1608464199211" duration="954000" />
       <workItem from="1608465182329" duration="460000" />
       <workItem from="1608465699251" duration="762000" />
+      <workItem from="1608633942865" duration="10014000" />
     </task>
     <servers />
   </component>
