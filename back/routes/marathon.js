@@ -41,7 +41,7 @@ router.post('/feedback', async (req, res) => {
     let curTask = await Task.findOne({_id: taskId}).populate('answers feedbacks');
     curTask.feedbacks.push({student: studentId, comment, points})
     await curTask.save();
-    const user = await Student.findById(userId).populate({
+    const user = await Student.findById(studentId).populate({
         path: 'marathons',
         populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
     });
