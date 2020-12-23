@@ -1,8 +1,10 @@
 import React from 'react';
 
-function FeedBack(props) {
+function FeedBack() {
     return (
-        <div>feedback</div>
+       <>
+           <div>feedback</div>
+       </>
     );
 }
 

@@ -10,7 +10,12 @@ const taskSchema = new mongoose.Schema({
     answers: [{
         student: {type: mongoose.Schema.Types.ObjectId, ref: 'Student'},
         answer: {type: String},
-    }]
+    }],
+    feedbacks: [{
+        student: {type: mongoose.Schema.Types.ObjectId, ref: 'Student'},
+        comment: {type: String},
+        points: {type: Number},
+    }],
 });
 
 module.exports = mongoose.model('Task', taskSchema);

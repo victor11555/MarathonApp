@@ -29,14 +29,14 @@ export default function StudentMainPage() {
         fetch(participateURL, {
             method: "POST",
             headers: {'Content-Type': 'Application/json'},
-            body: JSON.stringify({id: el._id, user: _id})
+            body: JSON.stringify({id: el._id, userId: _id})
         })
             .then(res => res.json())
             .then(response => {
                 if (!response.success) console.log(response.message);
                 else {
-                    const {student} = response;
-                    localStorage.setItem('user', JSON.stringify(student));
+                    const {user} = response;
+                    localStorage.setItem('user', JSON.stringify(user));
                     history.push('/dashboard')
                 }
             });

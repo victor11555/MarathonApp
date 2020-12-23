@@ -14,7 +14,6 @@ export default function MarathonCheck() {
     const submitHandler = (e, studentId, day, task, taskId) => {
         e.preventDefault();
         const comment = e.target.children[1].value;
-        console.log(studentId)
         fetch(checkStudentUrl, {
             method: 'POST',
             headers: {

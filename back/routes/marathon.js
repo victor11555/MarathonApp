@@ -3,7 +3,6 @@ const Marathon = require('../models/marathon');
 const Task = require('../models/task');
 const Company = require('../models/company');
 const Student = require('../models/student');
-const Feedback = require('../models/feedback');
 
 router
     .route('/')
@@ -16,14 +15,13 @@ router
             description,
             timeResponse,
             deadline,
-            role,
             timeVideo,
             channelName,
             _id
         } = req.body;
         const user = await Company.findById(_id).populate({
             path: 'marathons',
-            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers'}}}
+            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
         });
         const arr = [];
         for (let i = 0; i < duration; i += 1) {
@@ -33,7 +31,6 @@ router
             company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName, tasks: arr
         })
         await marathon.save();
-        // console.log(marathon);
         await user.marathons.push(marathon);
         await user.save();
         res.json({success: true, user}).status(200);
@@ -41,17 +38,15 @@ router
 
 router.post('/feedback', async (req, res) => {
     const {points, marathonId, comment, day, task, taskId, studentId} = req.body;
-    const feedback = new Feedback({
-        points,
-        marathon: marathonId,
-        task: taskId,
-        taskNumb: task,
-        day,
-        comment,
-        student: studentId,
+    let curTask = await Task.findOne({_id: taskId}).populate('answers feedbacks');
+    curTask.feedbacks.push({student: studentId, comment, points})
+    await curTask.save();
+    const user = await Student.findById(userId).populate({
+        path: 'marathons',
+        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
     });
-    feedback.save();
-    res.json({success: true})
+    await user.save();
+    res.json({success: true, user})
 })
 
 router.post('/addtask', async (req, res) => {
@@ -61,42 +56,47 @@ router.post('/addtask', async (req, res) => {
     })
     let curMarathon = await Marathon.findOne({_id: marathon._id}).populate({
         path: 'tasks',
-        populate: {path: 'task', populate: {path: 'answers'}}
+        populate: {path: 'task', populate: {path: 'answers feedbacks'}}
     });
     await task.save();
     curMarathon.tasks[day - 1].task.push(task.id);
     await curMarathon.save();
     const user = await Company.findById(userId).populate({
         path: 'marathons',
-        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers'}}}
+        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
     });
     await user.save();
     res.json({success: true, user})
 })
 
 router.post('/participate', async (req, res) => {
-    const {user, id} = req.body;
-    const student = await Student.findById(user).populate({
+    const {userId, id} = req.body;
+    const student = await Student.findById(userId).populate({
         path: 'marathons',
-        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers'}}}
+        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
     });
     const marathon = await Marathon.findById(id).populate({
         path: 'tasks',
-        populate: {path: 'task', populate: {path: 'answers'}}
+        populate: {path: 'task', populate: {path: 'answers feedbacks'}}
     })
     student.marathons.push(marathon);
     await student.save();
-    res.json({success: true, student}).status(200);
+    const user  = await Student.findById(userId).populate({
+        path: 'marathons',
+        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
+    });
+
+    res.json({success: true, user}).status(200);
 })
 
 router.post('/answer', async (req, res, next) => {
     const {answer, marathon, userId, day, task, taskId} = req.body;
-    let curTask = await Task.findOne({_id: taskId}).populate('answers');
+    let curTask = await Task.findOne({_id: taskId}).populate('answers feedbacks');
     curTask.answers.push({student: userId, answer})
     await curTask.save();
     const user = await Student.findById(userId).populate({
         path: 'marathons',
-        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers'}}}
+        populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
     });
     await user.save();
     res.json({success: true, user})

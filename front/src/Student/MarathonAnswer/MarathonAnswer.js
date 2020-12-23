@@ -52,12 +52,12 @@ export default function MarathonAnswer() {
                                 <ListGroup.Item>Tasks of the {el.day} day will be piblished
                                     in {el.day - 1} day(s)</ListGroup.Item>
                             )
-                        } else if (checker.checkCanPass(marathon._id, el.day) && checker.checkDeadline(marathon._id, el.day) )
+                        } else if (checker.checkDeadline(marathon._id, el.day) )
                             return (
                                 <li>
                                     <div>Day{el.day}</div>
                                     <ul>
-                                        {el.task.map((task, i) => {
+                                         {el.task.map((task, i) => {
                                             if (!checker.checkAnswer(marathon._id, user._id, el.day, i)) {
                                                 return (
                                                     <li>
@@ -69,25 +69,30 @@ export default function MarathonAnswer() {
                                                         </form>
                                                     </li>
                                                 )
-                                            } else if (!checker.checkFeedback(marathon._id, user._id, task._id)) {
+                                            } else if (!checker.checkFeedback(marathon._id, user._id, el.day, i)) {
                                                 return (
-                                                <li>
-                                                    <div>Task{i + 1}</div>
-                                                    <div>Ожидайте</div>
-                                                </li>
+                                                    <li>
+                                                        <div>Task{i + 1}</div>
+                                                        <div>Ожидайте</div>
+                                                    </li>
                                                 )
                                             } else {
                                                 return (
-                                                    <FeedBack/>
+                                                    <li>
+                                                        <div>Task{i + 1}</div>
+                                                        <FeedBack/>
+                                                    </li>
                                                 )
                                             }
-                                        })}
+                                        }) }
                                     </ul>
                                 </li>
                             )
-                        // else if (!checker.checkDeadline(marathon._id, el.day) && !checker.checkAnswer(marathon._id, user._id, el.day)) {
-                        //
-                        // }
+                        else if (!checker.checkDeadline(marathon._id, el.day) && !checker.checkAnswer(marathon._id, user._id, el.day)) {
+                            return (
+                                <div>удалить его </div>
+                            )
+                        }
                     })}
                 </ul>
             </ListGroup.Item>

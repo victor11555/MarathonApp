@@ -93,23 +93,16 @@ export default class Checker {
     checkAnswer(marathonId, userId, day, task) {
         let flag = false;
         this.user.marathons.filter((marathon) => marathon._id === marathonId)[0].tasks[day - 1].task[task].answers.map(answer => {
-                if(answer.student === userId) flag = true
-            })
+            if (answer.student === userId) flag = true
+        })
         return flag
     }
 
-    checkFeedback(marathonId, userId, taskId) {
-        return fetch(feedbackURL)
-            .then(res => res.json())
-            .then(response => {
-                if (!response.success) console.log(response.message)
-                else {
-                    const { feedbacks } = response;
-                    const feedback = feedbacks.filter(el => {
-                        return el.task === taskId && el.student === userId;
-                    })[0]
-                    return feedback
-                }
-            })
+    checkFeedback(marathonId, userId, day, task) {
+        let flag = false;
+        this.user.marathons.filter((marathon) => marathon._id === marathonId)[0].tasks[day - 1].task[task].feedbacks.map(feedback => {
+            if (feedback.student === userId) flag = true
+        })
+        return flag
     }
 }
