@@ -16,12 +16,12 @@ router.post('/login', async (req, res, next) => {
     if (role === 'company') {
         user = await Company.findOne({email}).populate({
             path: 'marathons',
-            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
+            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks', populate: {path: 'student'}}}}
         });
     } else {
         user = await Student.findOne({email}).populate({
             path: 'marathons',
-            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
+            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks', populate: {path: 'student'}}}}
         });
     }
     if (user && (await bcrypt.compare(password, user.password))) {
@@ -52,7 +52,7 @@ router.post('/signup', async (req, res, next) => {
             marathons: [],
         }).populate({
             path: 'marathons',
-            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
+            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks', populate: {path: 'student'}}}}
         });
     } else {
         const {tlg} = req.body;
@@ -67,7 +67,7 @@ router.post('/signup', async (req, res, next) => {
             marathons: [],
         }).populate({
             path: 'marathons',
-            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks'}}}
+            populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks', populate: {path: 'student'}}}}
         });
     }
     await user.save();

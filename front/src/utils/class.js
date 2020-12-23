@@ -14,7 +14,7 @@ export default class Checker {
     checkMarathonStarted(marathonId) {// находим марафон и возвращаем тру, если он начался
         const curMarathon = this.user.marathons.filter((marathon) => marathon._id === marathonId);
         if (curMarathon.length === 0) return false
-        return (new Date(curMarathon[0].start) < Date.now())//
+        return (new Date(curMarathon[0].start) < Date.now())
     }
 
     checkMarathonFinished(marathonId) {// вернет тру, если марафон закончился
@@ -91,7 +91,7 @@ export default class Checker {
     checkAnswer(marathonId, userId, day, task) {
         let flag = false;
         this.user.marathons.filter((marathon) => marathon._id === marathonId)[0].tasks[day - 1].task[task].answers.map(answer => {
-            if (answer.student === userId) flag = true
+            if (answer.student._id === userId) flag = true
         })
         return flag
     }
@@ -99,7 +99,7 @@ export default class Checker {
     checkFeedback(marathonId, userId, day, task) {
         let flag = false;
         this.user.marathons.filter((marathon) => marathon._id === marathonId)[0].tasks[day - 1].task[task].feedbacks.map(feedback => {
-            if (feedback.student === userId) flag = true
+            if (feedback.student._id === userId) flag = true
         })
         return flag
     }
