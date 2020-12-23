@@ -9,7 +9,7 @@ export default function CompanyDashboard() {
     const [stateMarathon, setSetMarathon] = useState();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = (index) => setShow(index);
     const history = useHistory();
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -30,12 +30,12 @@ export default function CompanyDashboard() {
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                    {user.marathons.map(el => (
+                    {user.marathons.map((el, index) => (
                         <>
-                            <Button variant="primary" onClick={handleShow}>
+                            <Button variant="primary" onClick={() => handleShow(index)}>
                                 Marathon: {el.title}
                             </Button>
-                            <Modal show={show} onHide={handleClose}>
+                            <Modal show={show===index} onHide={handleClose}>
                                 <Modal.Header closeButton>
                                     <Modal.Title>Marathon: {el.title}</Modal.Title>
                                 </Modal.Header>
