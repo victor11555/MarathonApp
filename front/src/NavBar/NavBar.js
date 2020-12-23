@@ -20,6 +20,7 @@ function NavBar() {
         <>
             {logged ? (
                 <Navbar bg="primary" variant="dark">
+                    
                     <Nav className="mr-auto">
                         <p style={myStyle}>Hello, {user.username}</p>
                         <Link style={ourStyle} to="/main">

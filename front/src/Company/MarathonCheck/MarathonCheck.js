@@ -52,6 +52,7 @@ export default function MarathonCheck() {
                                                     <form
                                                         onSubmit={e => submitHandler(e, answer.student, index + 1, i + 1, task._id)}>
                                                         <select onChange={changeHandler}>
+                                                            <option>0</option>
                                                             <option>1</option>
                                                             <option>2</option>
                                                             <option>3</option>
