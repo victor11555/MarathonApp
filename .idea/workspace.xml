@@ -3,23 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/models/feedback.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/models/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/routes/feedback.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/routes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/MarathonCheck/MarathonCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Student/FeedBack/FeedBack.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/FeedBack/FeedBack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/utils/class.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/urls.js" afterDir="false" />
     </list>
-    <list id="a603fad0-d59d-4c93-b658-d8ec27c5dd61" name="Changes by anka" comment="">
-      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
-    </list>
+    <list id="a603fad0-d59d-4c93-b658-d8ec27c5dd61" name="Changes by anka" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,21 +31,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js">
-      <ranges>
-        <range start1="33" end1="33" start2="33" end2="34" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
-        <range start1="34" end1="35" start2="35" end2="35" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="54" end1="55" start2="54" end2="55" changelist="a603fad0-d59d-4c93-b658-d8ec27c5dd61" />
-        <range start1="59" end1="60" start2="59" end2="60" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="71" end1="72" start2="71" end2="72" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="73" end1="77" start2="73" end2="77" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="80" end1="81" start2="80" end2="84" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="83" end1="84" start2="86" end2="87" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-        <range start1="87" end1="90" start2="90" end2="95" changelist="596df2c3-e927-4c0b-9451-ff81ed3c8602" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1lpXZRCkEkKXrMiIPSYM69wzxor" />
   <component name="ProjectLevelVcsManager">
@@ -100,6 +77,7 @@
       <workItem from="1608465699251" duration="762000" />
       <workItem from="1608633942865" duration="15001000" />
       <workItem from="1608710478097" duration="3977000" />
+      <workItem from="1608736536670" duration="3212000" />
     </task>
     <servers />
   </component>

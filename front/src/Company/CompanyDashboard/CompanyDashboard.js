@@ -3,13 +3,25 @@ import {ListGroup} from 'react-bootstrap';
 import MarathonForm from '../MarathonForm/MarathonForm';
 import {Modal, Button} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import Checker from "../../utils/class";
+import {loginURL} from "../../utils/urls";
 
 export default function CompanyDashboard() {
 
+    const hider = { display: "none" };
     const [stateMarathon, setSetMarathon] = useState();
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(null);
+    const [showButton, setShowButton] = useState(true);
+    const checker = new Checker();
     const handleClose = () => setShow(false);
-    const handleShow = (index) => setShow(index);
+    const handleShow = (index) => {
+        setShow(index);
+        if (checker.checkMarathonStarted(user.marathons[index]._id)) {
+            setShowButton(false);
+        } else {
+            setShowButton(true);
+        }
+    }
     const history = useHistory();
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -35,7 +47,7 @@ export default function CompanyDashboard() {
                             <Button variant="primary" onClick={() => handleShow(index)}>
                                 Marathon: {el.title}
                             </Button>
-                            <Modal show={show===index} onHide={handleClose}>
+                            <Modal show={show === index} onHide={handleClose}>
                                 <Modal.Header closeButton>
                                     <Modal.Title>Marathon: {el.title}</Modal.Title>
                                 </Modal.Header>
@@ -48,7 +60,8 @@ export default function CompanyDashboard() {
                                             onClick={() => history.push(`/dashboard/checkMarathon/${el._id}`)}>
                                         Check Marathon
                                     </Button>
-                                    <Button variant="primary"
+                                    {console.log(showButton)}
+                                    <Button style={showButton ? null : hider} variant="primary"
                                             onClick={() => history.push(`/dashboard/editMarathon/${el._id}`)}>
                                         Edit Marathon
                                     </Button>

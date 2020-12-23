@@ -47,8 +47,8 @@ export default function MarathonCheck() {
                                                 <li>
                                                     <div>Answers</div>
                                                     {/*популате студента*/}
-                                                    Student: {answer.student}
-                                                    Answer: {answer.answer}
+                                                    <div>Student: {answer.student.username}</div>
+                                                    <div>Answer: {answer.answer}</div>
                                                     <form
                                                         onSubmit={e => submitHandler(e, answer.student, index + 1, i + 1, task._id)}>
                                                         <select onChange={changeHandler}>
