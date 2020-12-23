@@ -48,6 +48,10 @@ export default function MarathonAnswer() {
                 <ul>
                     {marathon.tasks.map((el) => {
                         if (!checker.checkCanPass(marathon._id, el.day)) {
+                            if (el.day - 1 === 0) return (
+                                <ListGroup.Item>Tasks of the {el.day} day will be piblished
+                                in {marathon.timeResponse} </ListGroup.Item>
+                            )
                             return (
                                 <ListGroup.Item>Tasks of the {el.day} day will be piblished
                                     in {el.day - 1} day(s)</ListGroup.Item>
