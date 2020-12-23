@@ -1,5 +1,3 @@
-
-
 const router = require('express').Router();
 const Marathon = require('../models/marathon');
 const Task = require('../models/task');
@@ -102,26 +100,6 @@ router.post('/answer', async (req, res, next) => {
     });
     await user.save();
     res.json({success: true, user})
-})
-
-router.post('/editMarathon/del', async (req, res)=> {
-  const {taskId, userId} = req.body
-  console.log(taskId, userId);
-  const taskToDel = await Task.findByIdAndDelete(taskId)
-  const user = await Company.findById(userId).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}}});
-  await user.save();
-  res.json({success: true, user})
-
-
-})
-
-router.post('/participate', async (req, res) => {
-  const { user, id } = req.body;
-  const student = await Student.findById(user).populate({path: 'marathons', populate:{path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}}});
-  const marathon = await Marathon.findById(id).populate({path: 'tasks', populate:{path: 'task', populate:{path: 'answers'}}})
-  student.marathons.push(marathon);
-  await student.save();
-  res.json({ success: true, student }).status(200);
 })
 
 module.exports = router;
