@@ -3,7 +3,6 @@ import {feedbackURL} from "./urls";
 export default class Checker {
     constructor() {
         this.user = JSON.parse(localStorage.getItem("user"));
-        // console.log(this.user)
     }
 
     dateFromBase(start, length) {// добавляем к дате длительность марафона
@@ -29,7 +28,6 @@ export default class Checker {
         let day1 = day - 1;
         const curMarathon = this.user.marathons.filter((marathon) => marathon._id === marathonId);
         const changedTime = this.timeMaker(curMarathon[0].start, curMarathon[0].timeResponse)// меняем время на время начала марафона
-// console.log(curMarathon, changedTime);
         let arrayOfDays = []
         let newDate = new Date(changedTime)
 
