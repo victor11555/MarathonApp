@@ -50,8 +50,7 @@ export default function MarathonForm() {
         <Form onSubmit={submitHandler}>
             <Form.Group controlId="formBasicTitle">
                 <Form.Label>Title</Form.Label>
-                <Form.Control type="text" placeholder="Enter the name of the marathon" required
-                              pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
+                <Form.Control type="text" placeholder="Enter the name of the marathon" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicStartDate">
@@ -61,14 +60,12 @@ export default function MarathonForm() {
 
             <Form.Group controlId="formBasicDuration">
                 <Form.Label>Duration</Form.Label>
-                <Form.Control type="number" placeholder="Enter the duration of the marathon " required
-                              pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
+                <Form.Control type="number" placeholder="Enter the duration of the marathon " required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicDescription">
                 <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder="Enter the description  of the marathon " required
-                              pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
+                <Form.Control as="textarea" rows={3} placeholder="Enter the description  of the marathon " required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicTimePublicationTasks">
@@ -88,8 +85,7 @@ export default function MarathonForm() {
 
             <Form.Group controlId="formBasicTelegram">
                 <Form.Label>Telegram</Form.Label>
-                <Form.Control type="text" placeholder="Enter the name of the telegram channel " required
-                              pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
+                <Form.Control type="text" placeholder="Name of the telegram channel WITHOUT @ " required pattern="(?s)^((?!@).)*$"/>
             </Form.Group>
 
             <Button variant="primary" type="submit">

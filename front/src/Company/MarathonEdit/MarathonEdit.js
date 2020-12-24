@@ -46,7 +46,7 @@ export default function MarathonEdit({}) {
       });
   };
 
-  const newTaskHandler = (e, index ) => {
+  const newTaskHandler = (index ) => {
     // console.log(index);
     
     newState === null ? setNewState(index) : setNewState(null) 
@@ -62,12 +62,12 @@ export default function MarathonEdit({}) {
         </Accordion.Toggle>
         <Accordion.Collapse eventKey={`${index + 1}`}>
           <Card.Body>
-          <button
+          {newState===index ? null : <button
                  
-                  onClick={(e)=> newTaskHandler(e, index)}
+                  onClick={(e)=> newTaskHandler(index)}
                 >
                   Add new task
-                </button>
+                </button>}
               
             {newState===index ? (<TaskFormV day={index+1} marathon={marathon} userId={user._id} newTaskHandler={newTaskHandler}/>) : null}
             {marathon.tasks[index].task.map((task, i) => (

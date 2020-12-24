@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from "react-router-dom";
 import { ListGroup } from "react-bootstrap";
 import { answerUrl } from "../../utils/urls";
@@ -11,9 +11,11 @@ export default function MarathonAnswer() {
     const user = JSON.parse(localStorage.getItem('user'));
     const { marathons, _id } = user;
     const marathon = marathons.filter((el) => el._id === id)[0];
+    const [state, setState] = useState(null)
 
     const submitHandler = (e, day, task, taskId) => {
         e.preventDefault();
+        setState(task-1)
         const answer = e.target.children[0].value;
         fetch(answerUrl, {
             method: 'POST',
@@ -67,10 +69,10 @@ export default function MarathonAnswer() {
                                                     <li>
                                                         <div>Task{i + 1}</div>
                                                         <div>Description: {task.description}</div>
-                                                        <form onSubmit={e => submitHandler(e, el.day, i + 1, task._id)}>
+                                                        {state===i? null : <form onSubmit={e => submitHandler(e, el.day, i + 1, task._id)}>
                                                             <input placeholder={'Your solution'} />
                                                             <button type={'submit'}>Send</button>
-                                                        </form>
+                                                        </form>}
                                                     </li>
                                                 )
                                             } else if (!checker.checkFeedback(marathon._id, user._id, el.day, i)) {

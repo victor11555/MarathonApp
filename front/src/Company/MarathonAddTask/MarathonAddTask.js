@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Accordion, Card} from 'react-bootstrap';
 import {useParams} from 'react-router-dom';
-import TaskForm from "../TaskForm/TaskForm";
+import TaskFormV from "../TaskForm/TaskFormV";
 
 export default function MarathonAddTask() {
     const {id} = useParams();
@@ -9,6 +9,9 @@ export default function MarathonAddTask() {
     const {marathons} = user;
     const marathon = marathons.filter(el => el._id === id)[0];
     const [state, setState] = useState(null);
+    const newTaskHandler = (index) => {
+      state === null ? setState(index) : setState(null)
+    }
 
     const day = (index) => {
         return (
@@ -18,11 +21,9 @@ export default function MarathonAddTask() {
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey={`${index + 1}`}>
                     <Card.Body>
-                        <button onClick={() => {
-                            state === null ? setState(index) : setState(null)
-                        }}>Добавить задание
-                        </button>
-                        {state === index ? <TaskForm day={index + 1} userId={user._id} marathon={marathon}/> : null}
+                       {state === index ? null :  <button onClick={(e)=> newTaskHandler(index)}>Add Task X
+                        </button>}
+                        {state === index ? <TaskFormV day={index + 1} userId={user._id} marathon={marathon} newTaskHandler={newTaskHandler}/> : null}
                         {marathon.tasks[index].task.map((task, i) =>
                             <>
                                 <div>Task{i + 1}</div>
