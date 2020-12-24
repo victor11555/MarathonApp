@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import {mainURL, participateURL} from '../../utils/urls';
 import {Button, Card} from 'react-bootstrap';
 import {useHistory} from 'react-router-dom';
+import style from './StudentMainPage.module.css'
 
 
 export default function StudentMainPage() {
@@ -51,20 +52,22 @@ export default function StudentMainPage() {
                     if (element._id === el._id) flag = true;
                 })
                 return (
-                    <Card key={el._id} className="text-center">
+                    <div className={`${style.cards}`}>
+                    <Card key={el._id} className={`text-center mb-2 mt-2 ${style.card}`}>
                         <Card.Header>{el.company}</Card.Header>
                         <Card.Body>
                             <Card.Title>{el.title}</Card.Title>
                             <Card.Text>
                                 {el.description}
                             </Card.Text>
-                            {flag ? <div>You participate</div> : <Button onClick={e => onclickHandler(e, el, date)}
-                                                                         variant="primary">Participate</Button>}
+                            {flag ? <div>You participate</div> : <Button className={`text-center mb-2 ${style.button}`} onClick={e => onclickHandler(e, el, date)}
+                                                                         variant="danger">Participate</Button>}
                         </Card.Body>
                         <Card.Footer className="text-muted">
                             Start: {`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}
                         </Card.Footer>
                     </Card>
+                    </div>
                 )
 
             })}

@@ -1,0 +1,23 @@
+.title {
+  color: rgb(175, 57, 57)
+}
+
+.button {
+  width: 100px;
+}
+
+.card {
+  margin: 20px 100px;
+  
+}
+
+.cards, .forButton {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.titleCard {
+  text-align: center;
+}
