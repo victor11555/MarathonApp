@@ -30,17 +30,17 @@ function TaskFormV({ day, marathon, userId, newTaskHandler }) {
     return (
         <Form onSubmit={submitHandler}>
             <Form.Group controlId='formBasicDescription'>
-                <Form.Label>Task</Form.Label>
+                <Form.Label style={{ fontWeight: '800'}}>Task</Form.Label>
                 <Form.Control type='text' placeholder='Enter description' required />
             </Form.Group>
 
             <Form.Group controlId='formBasicUrl'>
-                <Form.Label>Solution</Form.Label>
+                <Form.Label style={{fontWeight: '800'}}>Solution</Form.Label>
                 <Form.Control type='text' placeholder='Url of solution' required />
             </Form.Group>
 
-            <Button variant='primary' type='submit'>
-                Add Task
+            <Button style={{marginBottom:'15px'}} className='btn btn-danger ml mt-2' variant='primary' type='submit'>
+                Add!
             </Button>
         </Form>
     );

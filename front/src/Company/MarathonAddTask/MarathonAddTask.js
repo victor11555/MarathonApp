@@ -15,24 +15,25 @@ export default function MarathonAddTask() {
 
     const day = (index) => {
         return (
-            <Card key={Math.random()}>
+          <div style={{paddingLeft: '20%'}}>
+            <Card style={{maxWidth: '60%'}} key={Math.random()}>
                 <Accordion.Toggle as={Card.Header} eventKey={`${index + 1}`}>
-                    Day {index + 1}
+                    Day <span style={{padding: '5px', fontWeight: '800'}}>{index + 1}</span>
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey={`${index + 1}`}>
                     <Card.Body>
-                       {state === index ? null :  <button onClick={(e)=> newTaskHandler(index)}>Add Task X
+                       {state === index ? null :  <button className={'btn ml mt-1 btn-outline-danger'} style={{marginBottom:'5px'}} onClick={(e)=> newTaskHandler(index)}>Add Task
                         </button>}
                         {state === index ? <TaskFormV day={index + 1} userId={user._id} marathon={marathon} newTaskHandler={newTaskHandler}/> : null}
                         {marathon.tasks[index].task.map((task, i) =>
                             <>
-                                <div>Task{i + 1}</div>
-                                <div>Description: {task.description}</div>
+                                <div style={{fontWeight: '800', marginTop:'10px'}}>Task {i + 1}</div>
+                                <div style={{marginTop:'5px'}}>Description: <span style={{padding: '5px',  fontWeight: '800'}}>{task.description}</span></div>
                             </>
                         )}
                     </Card.Body>
                 </Accordion.Collapse>
-            </Card>
+            </Card></div>
         )
     }
 
@@ -44,7 +45,7 @@ export default function MarathonAddTask() {
 
     return (
         <>
-            <div>Marathon: {marathon.title} </div>
+            <div style={{padding: '5px', fontWeight: '800', margin: '10px'}}>Marathon:  <span style={{padding: '5px', fontWeight: '800', margin: '10px'}}>{marathon.title}</span> </div>
             <Accordion defaultActiveKey="0">
                 {arr.map((el, index) =>
                     <>{day(index)}</>

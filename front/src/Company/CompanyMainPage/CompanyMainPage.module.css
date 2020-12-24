@@ -20,6 +20,17 @@
   z-index: -100;
 }
 
+
+.img2 {
+  position: absolute;
+  background-image: url('business-5840872_1280.png');
+  top: -50px;
+  background-size: 50%;
+  background-position: 0 40%;
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+
 .rgba {
   background: rgba(19, 19, 19, 0.144); 
   z-index: -50;
@@ -34,3 +45,11 @@
   max-width: 430px;
 }
 
+.formBg2 {
+  background: rgba(19, 19, 19, 0.561);
+  border-radius: 10px;
+  padding: 40px;
+  color: white;
+  font-size: 24px;
+  max-width: 430px;
+}
