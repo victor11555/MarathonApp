@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="596df2c3-e927-4c0b-9451-ff81ed3c8602" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/models/student.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/routes/marathon.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/routes/marathon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
     </list>
     <list id="a603fad0-d59d-4c93-b658-d8ec27c5dd61" name="Changes by anka" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +76,7 @@
       <workItem from="1608710478097" duration="3977000" />
       <workItem from="1608736536670" duration="3212000" />
       <workItem from="1608808700864" duration="382000" />
+      <workItem from="1608810503331" duration="608000" />
     </task>
     <servers />
   </component>
