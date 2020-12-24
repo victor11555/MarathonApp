@@ -44,7 +44,7 @@ export default function CompanySignUpForm() {
                 <Form.Label className='font-weight-bolder'>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" required
                               pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"/>
-                <Form.Text className="text-muted font-weight-bolder">
+                <Form.Text className="font-weight-bolder text-white">
                     We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
