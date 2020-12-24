@@ -1,4 +1,16 @@
 .hello {
   font-size: larger;
-  color: rgb(200, 200, 200);
+  color: rgb(0, 195, 255);
+  padding-right: 3em;
+  
+  
 }
+
+.text {
+  font-size: larger;
+  color: rgb(255, 255, 255);
+  padding-right: 1em;
+  
+  
+}
+
