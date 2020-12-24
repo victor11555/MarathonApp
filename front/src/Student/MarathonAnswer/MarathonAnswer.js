@@ -38,6 +38,7 @@ export default function MarathonAnswer() {
     if (checker.checkMarathonStarted(marathon._id,)) return (
         <ListGroup variant="flush">
             <ListGroup.Item>Marathon: {marathon.title}</ListGroup.Item>
+            <ListGroup.Item>Your points: {user.points}</ListGroup.Item>
             <ListGroup.Item>
                 <button onClick={(e) => {
                     e.preventDefault();

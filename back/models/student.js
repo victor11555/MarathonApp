@@ -7,6 +7,7 @@ const studentSchema = new mongoose.Schema({
     tlg: {type: String, required: true},
     marathons: [{type: mongoose.Schema.Types.ObjectId, ref: 'Marathon'}],
     role: {type: String, required: true, default: 'student'},
+    points: {type: Number, default: 0},
 });
 
 module.exports = mongoose.model('Student', studentSchema);
