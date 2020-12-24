@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 
 const marathonSchema = new mongoose.Schema({
-    title: {type: String, unique: true, required: true},
-    start: Date,
-    duration: Number,
-    timeResponse: String,
-    deadline: String,
-    timeVideo: String,
-    description: {type: String, unique: true, required: true},
+    title: {type: String, required: true},
+    start:  {type: Date, required: true},
+    duration: {type: Number, required: true},
+    timeResponse: {type: String, required: true},
+    deadline: {type: String, required: true},
+    timeVideo: {type: String, required: true},
+    description: {type: String, required: true},
     tasks: [{
         day: Number,
         task: [{type: mongoose.Schema.Types.ObjectId, ref: 'Task'}],
     }],
-    company: String,
-    channelName: String,
+    company: {type: String, required: true},
+    channelName: {type: String, required: true},
 });
 
 module.exports = mongoose.model('Marathon', marathonSchema);

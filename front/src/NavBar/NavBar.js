@@ -33,12 +33,12 @@ function NavBar() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/main">MARATHONLINE</Nav.Link>
+                            <Nav.Link exact href="/main">MARATHONLINE</Nav.Link>
                         </Nav>
                         <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, {user.username}!</p>
                         <Nav>
-                            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                            <Nav.Link onClick={onClickHandler} eventKey={2} href="main">
+                            <Nav.Link exact href="/dashboard">Dashboard</Nav.Link>
+                            <Nav.Link  exact onClick={onClickHandler} eventKey={2} href="/main">
                                 LogOut
                              </Nav.Link>
                         </Nav>
@@ -60,12 +60,12 @@ function NavBar() {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="mr-auto">
-                                    <Nav.Link href="/main">MARATHONLINE</Nav.Link>
+                                    <Nav.Link exact href="/main">MARATHONLINE</Nav.Link>
                                 </Nav>
                                 <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, guest! You should signup or login</p>
                                 <Nav>
-                                    <Nav.Link href="/login">Log In</Nav.Link>
-                                    <Nav.Link onClick={onClickHandler} eventKey={2} href="signup">
+                                    <Nav.Link exact href="/login">Log In</Nav.Link>
+                                    <Nav.Link exact onClick={onClickHandler} eventKey={2} href="signup">
                                         Sign Up
                              </Nav.Link>
                                 </Nav>
