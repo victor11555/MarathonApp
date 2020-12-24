@@ -23,9 +23,9 @@ function NavBar() {
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="/main">
                         <img
-                            src="/—Pngtree—elegant flame unique animal fox_3641602.png"
-                            width="30"
-                            height="30"
+                             src="/фави.png"
+                             width="60"
+                             height="60"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
@@ -33,13 +33,13 @@ function NavBar() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link exact href="/main">MARATHONLINE</Nav.Link>
+                            <Nav.Link exact href="/main"><span className={`text-center mt-3 mb-3 ${style.text}`}>MARATHONLINE</span></Nav.Link>
                         </Nav>
-                        <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, {user.username}!</p>
+                        <span className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, {user.username}!</span>
                         <Nav>
-                            <Nav.Link exact href="/dashboard">Dashboard</Nav.Link>
+                            <Nav.Link exact href="/dashboard"><span className={`text-center mt-3 mb-3 ${style.text}`}>Dashboard</span></Nav.Link>
                             <Nav.Link  exact onClick={onClickHandler} eventKey={2} href="/main">
-                                LogOut
+                                <span className={`text-center mt-3 mb-3 ${style.text}`}>LogOut</span>
                              </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
@@ -50,9 +50,9 @@ function NavBar() {
                         <Navbar  collapseOnSelect expand="lg" bg="dark" variant="dark">
                             <Navbar.Brand href="/main">
                                 <img
-                                    src="/МарафонNewBig.png"
-                                    width="30"
-                                    height="30"
+                                    src="/фави.png"
+                                    width="60"
+                                    height="60"
                                     className="d-inline-block align-top"
                                     alt="React Bootstrap logo"
                                 />
@@ -60,13 +60,13 @@ function NavBar() {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="mr-auto">
-                                    <Nav.Link exact href="/main">MARATHONLINE</Nav.Link>
+                                    <Nav.Link exact href="/main"><span className={`text-center mt-3 mb-3 ${style.text}`}> MARATHONLINE</span></Nav.Link>
                                 </Nav>
                                 <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, guest! You should signup or login</p>
                                 <Nav>
-                                    <Nav.Link exact href="/login">Log In</Nav.Link>
+                                    <Nav.Link exact href="/login"><span className={`text-center mt-3 mb-3 ${style.text}`}>Log In</span></Nav.Link>
                                     <Nav.Link exact onClick={onClickHandler} eventKey={2} href="signup">
-                                        Sign Up
+                                    <span className={`text-center mt-3 mb-3 ${style.text}`}>Sign Up</span>
                              </Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
