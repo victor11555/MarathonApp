@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const companySchema = new mongoose.Schema({
-    username: {type: String, unique: true, required: true},
-    company: String,
+    username: {type: String, required: true},
+    company: {type: String, required: true},
     email: {type: String, unique: true, required: true},
     password: {type: String, required: true},
     marathons: [{type: mongoose.Schema.Types.ObjectId, ref: 'Marathon'}],

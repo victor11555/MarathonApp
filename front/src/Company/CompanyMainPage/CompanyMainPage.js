@@ -1,10 +1,11 @@
 import React from 'react';
+const size = {maxWidth: '50%', margin: '10px'}
 
 function CompanyMainPage(props) {
     return (
         <>
-        <div>compMainPage</div>
-        <img src="/МарафонNewBig.png" alt=""/>
+        <div></div>
+        <img style={size} src="/МарафонNewBig.png" alt=""/>
         </>
     );
 }
