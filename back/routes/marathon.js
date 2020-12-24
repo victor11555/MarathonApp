@@ -28,7 +28,7 @@ router
             arr.push({day: i + 1, task: []});
         }
         const marathon = await new Marathon({
-            company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName, tasks: arr
+            company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName: channelName.replace('@',''), tasks: arr
         })
         await marathon.save();
         await user.marathons.push(marathon);
