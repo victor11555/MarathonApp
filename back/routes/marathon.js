@@ -28,7 +28,7 @@ router
             arr.push({day: i + 1, task: []});
         }
         const marathon = await new Marathon({
-            company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName, tasks: arr
+            company, title, start, duration, description, timeResponse, deadline, timeVideo, channelName: channelName.replace('@',''), tasks: arr
         })
         await marathon.save();
         await user.marathons.push(marathon);
@@ -45,6 +45,7 @@ router.post('/feedback', async (req, res) => {
         path: 'marathons',
         populate: {path: 'tasks', populate: {path: 'task', populate: {path: 'answers feedbacks', populate: {path: 'student'}}}}
     });
+    user.points += +points;
     await user.save();
     res.json({success: true, user})
 })
@@ -116,7 +117,6 @@ router.post('/editMarathon', async (req, res) => {
   await user.save();
   res.json({success: true, user})
 })
-
 
 router.post('/editMarathon/del', async (req, res)=> {
   const {taskId, userId} = req.body

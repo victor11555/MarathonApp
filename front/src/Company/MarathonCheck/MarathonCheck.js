@@ -10,9 +10,15 @@ export default function MarathonCheck() {
     const {marathons} = JSON.parse(localStorage.getItem('user'));
     const marathon = marathons.filter((el) => el._id === id)[0];
     const changeHandler = (e) => {setPoints(e.target.value)}
+    const [state, setState] = useState([])
+    const [stateDay, setStateDay] = useState(null)
+    const [stateStudent, setStateStudent] = useState([])
 
     const submitHandler = (e, studentId, day, task, taskId) => {
         e.preventDefault();
+        // console.log('in', day, task);
+      
+        // console.log('out', state, stateDay);
         const comment = e.target.children[1].value;
         fetch(checkStudentUrl, {
             method: 'POST',
@@ -26,6 +32,9 @@ export default function MarathonCheck() {
                 if (!response.success) console.log(response.message);
                 else {
                     console.log(response);
+                    setState([...state, task-1])
+                    setStateDay((day-1))
+                    setStateStudent([...stateStudent, studentId])
                 }
             });
     }
@@ -49,8 +58,8 @@ export default function MarathonCheck() {
                                                     {/*популате студента*/}
                                                     <div>Student: {answer.student.username}</div>
                                                     <div>Answer: {answer.answer}</div>
-                                                    <form
-                                                        onSubmit={e => submitHandler(e, answer.student, index + 1, i + 1, task._id)}>
+                                                    {stateStudent.indexOf(answer.student._id) !== -1 && state.indexOf(i) !== -1 && stateDay ===index? null :<form
+                                                        onSubmit={e => submitHandler(e, answer.student._id, index + 1, i + 1, task._id)}>
                                                         <select onChange={changeHandler}>
                                                             <option>0</option>
                                                             <option>1</option>
@@ -61,7 +70,7 @@ export default function MarathonCheck() {
                                                         </select>
                                                         <input name={'comment'} placeholder={'comment'}/>
                                                         <button type='submit'>Checked</button>
-                                                    </form>
+                                                    </form>}
                                                 </li>
                                             )}</ul>
                                     </li>)}

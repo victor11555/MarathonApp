@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import style from './CompanyMainPage.module.css'
+
 
 function CompanyMainPage(props) {
     const user = JSON.parse(localStorage.getItem('user'));

@@ -23,7 +23,7 @@ function TaskFormV({ day, marathon, userId, newTaskHandler }) {
                     localStorage.setItem('user', JSON.stringify(user));
                     e.target.children[0].children[1].value = '';
                     e.target.children[1].children[1].value = '';
-                    newTaskHandler()
+                    newTaskHandler(day-1)
                 }
             });
     }
