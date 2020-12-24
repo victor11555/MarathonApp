@@ -4,6 +4,21 @@
 }
 
 .cards>.card {
-min-width: 50%;
+width: 30%;
 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.img {
+    position: absolute;
+    background-image: url('student-5608074_1920.png');
+    top: -50px;
+    background-size: 45%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    z-index: -100;
+}
+
+.rgba {
+  background: rgba(19, 19, 19, 0.144); 
+  z-index: -50;
 }
