@@ -1,0 +1,9 @@
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+min-width: 600px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

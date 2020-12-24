@@ -1,9 +1,10 @@
-import {Navbar, Nav} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import style from './NavBar.module.css'
 
 function NavBar() {
-    const ourStyle = {color: "white", padding: "5px"};
-    const myStyle = {color: "black", padding: "5px"};
+    const ourStyle = { color: "white", padding: "5px" };
+    const myStyle = { color: "black", padding: "5px" };
     let logged = true;
     const user = JSON.parse(localStorage.getItem("user"));
 
@@ -18,39 +19,61 @@ function NavBar() {
 
     return (
         <>
-            {logged ? (
-                <Navbar bg="primary" variant="dark">
-                    
-                    <Nav className="mr-auto">
-                        <p style={myStyle}>Hello, {user.username}</p>
-                        <Link style={ourStyle} to="/main">
-                            MARATHON APP
-                        </Link>
-                        <Link style={ourStyle} to="/dashboard">
-                            Dashboard
-                        </Link>
-                        <Link onClick={onClickHandler} style={ourStyle} to="#">
-                            LogOut
-                        </Link>
-                    </Nav>
+            {logged ? (<>
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar.Brand href="/main">
+                        <img
+                            src="/—Pngtree—elegant flame unique animal fox_3641602.png"
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                            alt="React Bootstrap logo"
+                        />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mr-auto">
+                            <Nav.Link href="/main">MARATHONLINE</Nav.Link>
+                        </Nav>
+                        <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, {user.username}!</p>
+                        <Nav>
+                            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                            <Nav.Link onClick={onClickHandler} eventKey={2} href="main">
+                                LogOut
+                             </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Navbar>
+            </>
             ) : (
-                <Navbar bg="primary" variant="dark">
-                    <Nav className="mr-auto">
-                        <p style={myStyle}>Hello, guest! You should signup or login</p>
-
-                        <Link style={ourStyle} to="/login">
-                            Log In
-                        </Link>
-                        <Link style={ourStyle} to="/signup">
-                            Sign Up
-                        </Link>
-                    </Nav>
-                </Navbar>
-            )}
+                    <>
+                        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                            <Navbar.Brand href="/main">
+                                <img
+                                    src="/МарафонNewBig.png"
+                                    width="30"
+                                    height="30"
+                                    className="d-inline-block align-top"
+                                    alt="React Bootstrap logo"
+                                />
+                            </Navbar.Brand>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Collapse id="responsive-navbar-nav">
+                                <Nav className="mr-auto">
+                                    <Nav.Link href="/main">MARATHONLINE</Nav.Link>
+                                </Nav>
+                                <p className={`text-center mt-3 mb-3 ${style.hello}`}>Hello, guest! You should signup or login</p>
+                                <Nav>
+                                    <Nav.Link href="/login">Log In</Nav.Link>
+                                    <Nav.Link onClick={onClickHandler} eventKey={2} href="signup">
+                                        Sign Up
+                             </Nav.Link>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Navbar>
+                    </>
+                )}
         </>
-
-
     );
 }
 
