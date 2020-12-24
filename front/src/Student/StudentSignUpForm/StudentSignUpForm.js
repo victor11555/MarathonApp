@@ -29,36 +29,38 @@ export default function StudentSignUpForm() {
     }
 
     return (
-        <Form onSubmit={submitHandler}>
+        <>
+        <Form className='d-flex flex-column' onSubmit={submitHandler}>
             <Form.Group controlId="formBasicUserName">
-                <Form.Label>Username</Form.Label>
+                <Form.Label className='font-weight-bolder'>Username</Form.Label>
                 <Form.Control type="text" placeholder="Enter your name" required pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
             </Form.Group>
             {/**/}
             <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label className='font-weight-bolder'>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" required
                               pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"/>
-                <Form.Text className="text-muted">
+                <Form.Text className="text-muted font-weight-bolder">
                     We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
             {/**/}
             <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label className='font-weight-bolder'>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" required/>
             </Form.Group>
             {/*телеграм*/}
             <Form.Group controlId="formBasicTelegram">
-                <Form.Label>Telegram</Form.Label>
+                <Form.Label className='font-weight-bolder'>Telegram</Form.Label>
                 <Form.Control type="text" placeholder="Add your telegram" required/>
             </Form.Group>
 
 
-            <Button variant="primary" type="submit">
+            <Button className='font-weight-bolder' variant="danger" type="submit">
                 Sign Up
             </Button>
         </Form>
+        </>
     )
 }
 

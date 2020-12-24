@@ -47,7 +47,7 @@ function NavBar() {
             </>
             ) : (
                     <>
-                        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                        <Navbar  collapseOnSelect expand="lg" bg="dark" variant="dark">
                             <Navbar.Brand href="/main">
                                 <img
                                     src="/МарафонNewBig.png"

@@ -12,7 +12,7 @@ function MainPage() {
     }
     return (
         <>
-            <div>
+            <div className='d-flex flex-column justify-content-center mt-2'>
                 {tmp ? <CompanyMainPage/> : <StudentMainPage/>}
             </div>
         </>

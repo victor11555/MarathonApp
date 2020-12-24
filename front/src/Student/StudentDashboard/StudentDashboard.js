@@ -19,16 +19,16 @@ export default function StudentDashboard() {
             {user && user.marathons.map(el => {
                 const date = new Date(el.start);
                 return (
-                    <Card className={`${style.card}`} style={{ width: '18rem' }}>
+                    <Card className={`${style.card} bg-light`} style={{ width: '18rem' }}>
                         <Card.Body >
-                            <Card.Title className={`${style.titleCard}`}>{el.title}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className={`${style.titleCard} font-weight-bolder`}>{el.title}</Card.Title>
+                            <Card.Text className='font-italic'>
                                 {el.description}
                             </Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>Start: {`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</ListGroupItem>
-                            <ListGroupItem>Duration: {el.duration} days</ListGroupItem>
+                        <ListGroup className="list-group-flush ">
+                            <ListGroupItem className='bg-light'><span className='font-weight-bold'>Start: </span>{`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</ListGroupItem>
+                            <ListGroupItem className='bg-light'><span className='font-weight-bold'>Duration: </span>{el.duration} days</ListGroupItem>
                         </ListGroup>
                         <Card.Body className={`${style.forButton}`}>
                         <Button className={`${style.button}`}  onClick={e => onclickHandler(e, el)} variant="danger">Go</Button>
