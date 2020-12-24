@@ -46,21 +46,21 @@ function TaskForm({ day, marathon, userId, task, editHandler }) {
         
         
 
-        <Form onSubmit={submitHandler }>
+        <Form style={{marginBottom: '30px'}}onSubmit={submitHandler }>
          
           
             <Form.Group controlId='formBasicDescription'>
-                <Form.Label>Task</Form.Label>
+                <Form.Label style={{padding: '10px', fontWeight: '800'}}>Task</Form.Label>
                 <Form.Control type='text' placeholder='New description' defaultValue={task.description} required />
             </Form.Group>
 
             <Form.Group controlId='formBasicUrl'>
-                <Form.Label>URL</Form.Label>
+                <Form.Label style={{padding: '10px', fontWeight: '800'}}>URL</Form.Label>
                 <Form.Control type='text' placeholder='New url of solution' defaultValue={task.solution} required />
             </Form.Group>
 
-            <Button variant='primary' type='submit'>
-               Edit Task
+            <Button className='btn btn-info ml mt-2 ml-2'  variant='primary' type='submit'>
+               EDIT!
             </Button>
         </Form>
 

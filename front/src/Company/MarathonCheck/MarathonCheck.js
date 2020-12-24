@@ -16,9 +16,7 @@ export default function MarathonCheck() {
 
     const submitHandler = (e, studentId, day, task, taskId) => {
         e.preventDefault();
-        // console.log('in', day, task);
       
-        // console.log('out', state, stateDay);
         const comment = e.target.children[1].value;
         fetch(checkStudentUrl, {
             method: 'POST',
@@ -40,17 +38,17 @@ export default function MarathonCheck() {
     }
     return (
         <ListGroup variant="flush">
-            <ListGroup.Item>Marathon: {marathon.title}</ListGroup.Item>
+            <ListGroup.Item >Marathon: <span style={{padding: '5px', fontWeight: '800'}}>{marathon.title}</span></ListGroup.Item>
             <ListGroup.Item>
                 <ul>
                     {marathon.tasks.map((el, index) =>
                         <li>
-                            <div>Day{el.day}</div>
+                            <div style={{padding: '10px', fontWeight: '800'}}>Day {el.day}</div>
                             <ul>
                                 {el.task.map((task, i) =>
                                     <li>
-                                        <div>Task{i + 1}</div>
-                                        <div>Description: {task.description}</div>
+                                        <div>Task {i + 1}</div>
+                                        <div>Description: <span style={{fontWeight: '800'}}>{task.description}</span></div>
                                         <ul>
                                             {task.answers.map((answer) =>
                                                 <li>

@@ -47,50 +47,53 @@ export default function MarathonForm() {
     }
 
     return (
-        <Form onSubmit={submitHandler}>
+        <Form style={{maxWidth: '70%', paddingLeft: '25%'}} onSubmit={submitHandler}>
+          {/* <br></br> */}
             <Form.Group controlId="formBasicTitle">
-                <Form.Label>Title</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Title</Form.Label>
                 <Form.Control type="text" placeholder="Enter the name of the marathon" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicStartDate">
-                <Form.Label>Start date</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Start date</Form.Label>
                 <Form.Control type="datetime-local" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicDuration">
-                <Form.Label>Duration</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Duration</Form.Label>
                 <Form.Control type="number" placeholder="Enter the duration of the marathon " required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicDescription">
-                <Form.Label>Description</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Description</Form.Label>
                 <Form.Control as="textarea" rows={3} placeholder="Enter the description  of the marathon " required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicTimePublicationTasks">
-                <Form.Label>Time of publication of tasks</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Time of publication of tasks</Form.Label>
                 <Form.Control type="time" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicDeadline">
-                <Form.Label>Deadline</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Deadline</Form.Label>
                 <Form.Control type="time" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicTimePublicationVideo">
-                <Form.Label>Time of publication of video solutions</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Time of publication of video solutions</Form.Label>
                 <Form.Control type="time" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicTelegram">
-                <Form.Label>Telegram</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Telegram</Form.Label>
                 <Form.Control type="text" placeholder="Name of the telegram channel WITHOUT @ " required pattern="(?s)^((?!@).)*$"/>
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button style={{margin: '20px'}} className='btn btn-danger ml-2 mt-2' variant="primary" type="submit">
                 Create marathon
             </Button>
+
         </Form>
+        
     )
 }
