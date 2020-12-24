@@ -54,13 +54,13 @@ export default function StudentMainPage() {
                 return (
                     <div className={`${style.cards}`}>
                     <Card key={el._id} className={`text-center mb-2 mt-2 ${style.card}`}>
-                        <Card.Header>{el.company}</Card.Header>
+                        <Card.Header>Organizer: {el.company}</Card.Header>
                         <Card.Body>
-                            <Card.Title>{el.title}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className='font-weight-bolder'>{el.title}</Card.Title>
+                            <Card.Text className='font-italic'>
                                 {el.description}
                             </Card.Text>
-                            {flag ? <div>You participate</div> : <Button className={`text-center mb-2 ${style.button}`} onClick={e => onclickHandler(e, el, date)}
+                            {flag ? <div className='btn btn-secondary'>You participate</div> : <Button className={`text-center mb-2 ${style.button}`} onClick={e => onclickHandler(e, el, date)}
                                                                          variant="danger">Participate</Button>}
                         </Card.Body>
                         <Card.Footer className="text-muted">
