@@ -1,10 +1,20 @@
 .img {
+  position: absolute;
   background-image: url('2335098-scaled.jpg');
-background-size: contain;
-background-repeat: no-repeat;
-height: 100%;
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: -100;
 }
 
 .rgba {
   background: rgba(19, 19, 19, 0.144); 
+  z-index: -50;
 }
+
+.formBg {
+  background: rgba(19, 19, 19, 0.561);
+  padding: 10px;
+  color: white;
+}
+

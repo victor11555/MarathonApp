@@ -7,9 +7,13 @@ import style from './LoginPage.module.css'
 function LoginPage() {
     const [state, setState] = useState(true);
     return (
-        <div className={`${style.img}`} style={{ height: '100vh' }}>
-            <div className={`${style.rgba}`} style={{ height: '100vh' }}>
-                <div className='d-flex flex-column justify-content-end align-items-end' style={{ height: '60vh' }}>
+        <div style={{ position: 'relative' }}>
+            <div className={`${style.img}`} style={{ height: '100vh', width: '100vw' }}>
+                <div className={`${style.rgba}`} style={{ height: '100vh' }}>
+                </div>
+            </div>
+            <div className='d-flex flex-column justify-content-center align-items-center' style={{ height: '60vh' }}>
+                <div className={`${style.formBg}`}>
                     <div>
                         <select className='custom-select mb-1' onChange={() => setState(!state)}>
                             <option>company</option>
@@ -22,6 +26,7 @@ function LoginPage() {
                 </div>
             </div>
         </div>
+
     );
 }
 
