@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import StudentSignUpForm from '../../Student/StudentSignUpForm/StudentSignUpForm';
 import CompanySignUpForm from '../../Company/CompanySignUpForm/CompanySignUpForm';
 import style from './SignUpPage.module.css'
+import { Form} from 'react-bootstrap';
 
 function SignUpPage() {
     const [state, setState] = useState(true);
@@ -13,6 +14,7 @@ function SignUpPage() {
             <div className='d-flex flex-column justify-content-center align-items-center' style={{ height: '60vh' }} >
                 <div className={`${style.formBg}`}>
                 <div>
+                <Form.Label className='font-weight-bolder'>Your status</Form.Label>
                     <select className='custom-select mb-1' onChange={() => setState(!state)}>
                         <option>company</option>
                         <option>student</option>

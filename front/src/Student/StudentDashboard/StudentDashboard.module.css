@@ -21,3 +21,18 @@
 .titleCard {
   text-align: center;
 }
+
+.img {
+  position: absolute;
+  background-image: url('checklist-2023731_960_720.png');
+  top: -50px; 
+  background-size: 35%;
+  background-position: 95% 75%;
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+
+.rgba {
+background: rgba(3, 3, 3, 0.144); 
+z-index: -50;
+}

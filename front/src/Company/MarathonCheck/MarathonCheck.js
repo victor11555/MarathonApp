@@ -39,8 +39,8 @@ export default function MarathonCheck() {
     return (
         <ListGroup variant="flush">
             <ListGroup.Item >Marathon: <span style={{padding: '5px', fontWeight: '800'}}>{marathon.title}</span></ListGroup.Item>
-            <ListGroup.Item>
-                <ul>
+            <ListGroup.Item className='d-flex justify-content-center'>
+                <ul className='p-5 bg-light'>
                     {marathon.tasks.map((el, index) =>
                         <li>
                             <div style={{padding: '10px', fontWeight: '800'}}>Day {el.day}</div>
