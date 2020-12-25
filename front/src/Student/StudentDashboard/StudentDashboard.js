@@ -14,28 +14,33 @@ export default function StudentDashboard() {
 
     return (
         <>
-        <h1 className={`text-center mt-3 mb-3 ${style.title}`}>Marathons:</h1>
-        <div className={`${style.cards}`}>
-            {user && user.marathons.map(el => {
-                const date = new Date(el.start);
-                return (
-                    <Card className={`${style.card} bg-light`} style={{ width: '18rem' }}>
-                        <Card.Body >
-                            <Card.Title className={`${style.titleCard} font-weight-bolder`}>{el.title}</Card.Title>
-                            <Card.Text className='font-italic'>
-                                {el.description}
-                            </Card.Text>
-                        </Card.Body>
-                        <ListGroup className="list-group-flush ">
-                            <ListGroupItem className='bg-light'><span className='font-weight-bold'>Start: </span>{`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</ListGroupItem>
-                            <ListGroupItem className='bg-light'><span className='font-weight-bold'>Duration: </span>{el.duration} days</ListGroupItem>
-                        </ListGroup>
-                        <Card.Body className={`${style.forButton}`}>
-                        <Button className={`${style.button}`}  onClick={e => onclickHandler(e, el)} variant="danger">Go</Button>
-                        </Card.Body>
-                    </Card>)
-            })}
-        </div>
+            <div style={{ position: 'relative' }}>
+                <div className={`${style.img}`} style={{ height: '100hv', width: '100vw' }}>
+                    <div className={`${style.rgba}`} style={{ height: '100vh' }}> </div>
+                </div >
+                <h1 className={`text-center mt-3 mb-3 ${style.title}`}>Marathons:</h1>
+                <div className={`${style.cards}`}>
+                    {user && user.marathons.map(el => {
+                        const date = new Date(el.start);
+                        return (
+                            <Card className={`${style.card} bg-light`} style={{ width: '18rem' }}>
+                                <Card.Body >
+                                    <Card.Title className={`${style.titleCard} font-weight-bolder`}>{el.title}</Card.Title>
+                                    <Card.Text className='font-italic'>
+                                        {el.description}
+                                    </Card.Text>
+                                </Card.Body>
+                                <ListGroup className="list-group-flush ">
+                                    <ListGroupItem className='bg-light'><span className='font-weight-bold'>Start: </span>{`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`}</ListGroupItem>
+                                    <ListGroupItem className='bg-light'><span className='font-weight-bold'>Duration: </span>{el.duration} days</ListGroupItem>
+                                </ListGroup>
+                                <Card.Body className={`${style.forButton}`}>
+                                    <Button className={`${style.button}`} onClick={e => onclickHandler(e, el)} variant="danger">Go</Button>
+                                </Card.Body>
+                            </Card>)
+                    })}
+                </div>
+            </div>
         </>
     )
 }

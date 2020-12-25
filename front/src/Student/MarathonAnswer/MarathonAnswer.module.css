@@ -1,0 +1,18 @@
+.img {
+  position: absolute;
+  background-image: url('exam-2428208_960_720.png');
+  top: -50px;
+  background-size: 50%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+
+.rgba {
+background: rgba(3, 3, 3, 0.144); 
+z-index: -50;
+}
+
+.title {
+  color: rgb(175, 57, 57)
+}

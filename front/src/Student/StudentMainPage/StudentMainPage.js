@@ -48,7 +48,7 @@ export default function StudentMainPage() {
 
             <div style={{ position: 'relative' }}>
                 <div className='container d-flex flex-column align-items-center'>
-                    <div className={`${style.img}`} style={{ height: '100vh', width: '100vw' }}>
+                    <div className={`${style.img}`} style={{ height: '100hv', width: '100vw' }}>
                         <div className={`${style.rgba}`} style={{ height: '100vh' }}> </div>
                     </div >
                 </div>
