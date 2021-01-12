@@ -1,5 +1,3 @@
-import {feedbackURL} from "./urls";
-
 export default class Checker {
     constructor() {
         this.user = JSON.parse(localStorage.getItem("user"));
@@ -7,8 +5,7 @@ export default class Checker {
 
     dateFromBase(start, length) {// добавляем к дате длительность марафона
         let startDate = new Date(start);
-        let newDate = startDate.setDate(startDate.getDate() + length);
-        return newDate// в миллисекундах
+        return startDate.setDate(startDate.getDate() + length)// в миллисекундах
     }
 
     checkMarathonStarted(marathonId) {// находим марафон и возвращаем тру, если он начался
@@ -55,7 +52,6 @@ export default class Checker {
             arrayOfDays.push(newDate);
 
         }
-        // если текущая дата меньше, чем дедлайн, то возвращает тру
         return Date.now() < arrayOfDays[day1]
     }
 
@@ -85,7 +81,6 @@ export default class Checker {
         array.splice(16, 5, ...splitedSetTime)
         const finalArray = array.join('')
         return new Date(finalArray)
-
     }
 
     checkAnswer(marathonId, userId, day, task) {

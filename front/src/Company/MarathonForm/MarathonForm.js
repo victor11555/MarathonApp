@@ -48,7 +48,7 @@ export default function MarathonForm() {
 
     return (
         <Form style={{maxWidth: '70%', paddingLeft: '25%'}} onSubmit={submitHandler}>
-          {/* <br></br> */}
+
             <Form.Group controlId="formBasicTitle">
                 <Form.Label style={{padding: '5px', fontWeight: '800'}}>Title</Form.Label>
                 <Form.Control type="text" placeholder="Enter the name of the marathon" required/>
@@ -80,13 +80,15 @@ export default function MarathonForm() {
             </Form.Group>
 
             <Form.Group controlId="formBasicTimePublicationVideo">
-                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Time of publication of video solutions</Form.Label>
+                <Form.Label style={{padding: '5px', fontWeight: '800'}}>Time of publication of video
+                    solutions</Form.Label>
                 <Form.Control type="time" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicTelegram">
                 <Form.Label style={{padding: '5px', fontWeight: '800'}}>Telegram</Form.Label>
-                <Form.Control type="text" placeholder="Name of the telegram channel WITHOUT @ " required pattern="(?s)^((?!@).)*$"/>
+                <Form.Control type="text" placeholder="Name of the telegram channel WITHOUT @ " required
+                              pattern="(?s)^((?!@).)*$"/>
             </Form.Group>
 
             <Button style={{margin: '20px'}} className='btn btn-danger ml-2 mt-2' variant="primary" type="submit">
@@ -94,6 +96,6 @@ export default function MarathonForm() {
             </Button>
 
         </Form>
-        
+
     )
 }

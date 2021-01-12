@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';

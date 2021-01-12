@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const marathonSchema = new mongoose.Schema({
     title: {type: String, required: true},
-    start:  {type: Date, required: true},
+    start: {type: Date, required: true},
     duration: {type: Number, required: true},
     timeResponse: {type: String, required: true},
     deadline: {type: String, required: true},

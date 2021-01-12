@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69b83992-2ac3-4419-84cf-a3b37c954422" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Company/CompanyDashboard/CompanyDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/FeedBack/FeedBack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/MarathonAnswer/MarathonAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentDashboard/StudentDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentMainPage/StudentMainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Student/StudentSignUpForm/StudentSignUpForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Timer/Timer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/DashboardPage/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/DashboardPage/DashboardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/LoginPage/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/SignUpPage/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/SignUpPage/SignUpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/reducer/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/reducer/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/utils/class.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/utils/class.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1myHaOkvaa1XcsvlAa9nkKzWILq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69b83992-2ac3-4419-84cf-a3b37c954422" name="Default Changelist" comment="" />
+      <created>1610458973487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610458973487</updated>
+      <workItem from="1610458974639" duration="1677000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

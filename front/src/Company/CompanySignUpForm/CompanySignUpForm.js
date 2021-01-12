@@ -9,7 +9,6 @@ export default function CompanySignUpForm() {
         const company = e.target.children[1].children[1].value;
         const email = e.target.children[2].children[1].value;
         const password = e.target.children[3].children[1].value;
-
         fetch(signUpURL, {
             method: 'POST',
             headers: {'Content-type': 'Application/json'},
@@ -26,14 +25,12 @@ export default function CompanySignUpForm() {
             });
     }
 
-
     return (
         <Form className='d-flex flex-column' onSubmit={submitHandler}>
             <Form.Group controlId="formBasicUserName">
                 <Form.Label className='font-weight-bolder'>Username</Form.Label>
                 <Form.Control type="text" placeholder="Enter your name" required pattern="^[a-zA-Z](.[a-zA-Z0-9_-]*)$"/>
             </Form.Group>
-            {/**/}
 
             <Form.Group controlId="formBasicCompany">
                 <Form.Label className='font-weight-bolder'>Company</Form.Label>
@@ -48,7 +45,7 @@ export default function CompanySignUpForm() {
                     We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
-            {/**/}
+
             <Form.Group controlId="formBasicPassword">
                 <Form.Label className='font-weight-bolder'>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" required/>
